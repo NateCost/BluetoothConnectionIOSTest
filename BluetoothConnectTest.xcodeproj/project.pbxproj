@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
 		F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */; };
 		F4CEEF19253829BB00A37ECB /* BluetoothConnectTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEF18253829BB00A37ECB /* BluetoothConnectTestUITests.swift */; };
+		F4DC105D2538400D0074B211 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC105C2538400D0074B211 /* SwiftFormat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DC105D2538400D0074B211 /* SwiftFormat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,12 +137,16 @@
 				F4CEEEEF253829B900A37ECB /* Sources */,
 				F4CEEEF0253829B900A37ECB /* Frameworks */,
 				F4CEEEF1253829B900A37ECB /* Resources */,
+				F484D0302539EB0D007B048D /* SwiftFormat */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BluetoothConnectTest;
+			packageProductDependencies = (
+				F4DC105C2538400D0074B211 /* SwiftFormat */,
+			);
 			productName = BluetoothConnectTest;
 			productReference = F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */;
 			productType = "com.apple.product-type.application";
@@ -213,6 +219,9 @@
 				Base,
 			);
 			mainGroup = F4CEEEEA253829B900A37ECB;
+			packageReferences = (
+				F4DC105B2538400D0074B211 /* XCRemoteSwiftPackageReference "SwiftFormat" */,
+			);
 			productRefGroup = F4CEEEF4253829B900A37ECB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -250,6 +259,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F484D0302539EB0D007B048D /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat --lint --lenient --verbose .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4CEEEEF253829B900A37ECB /* Sources */ = {
@@ -592,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4DC105B2538400D0074B211 /* XCRemoteSwiftPackageReference "SwiftFormat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicklockwood/SwiftFormat";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.47.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4DC105C2538400D0074B211 /* SwiftFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4DC105B2538400D0074B211 /* XCRemoteSwiftPackageReference "SwiftFormat" */;
+			productName = SwiftFormat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4CEEEEB253829B900A37ECB /* Project object */;
 }
