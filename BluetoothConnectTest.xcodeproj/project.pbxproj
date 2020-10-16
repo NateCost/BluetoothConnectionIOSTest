@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
+		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
 		F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEF6253829B900A37ECB /* AppDelegate.swift */; };
 		F4CEEEFB253829B900A37ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEFA253829B900A37ECB /* ViewController.swift */; };
 		F4CEEEFE253829B900A37ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEEFC253829B900A37ECB /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothConnectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEEEF6253829B900A37ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CEEEFA253829B900A37ECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,46 @@
 			path = "Supporting FIles";
 			sourceTree = "<group>";
 		};
+		F484D04B2539F32C007B048D /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F4CEEEF6253829B900A37ECB /* AppDelegate.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		F484D04C2539F436007B048D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F484D04F2539F66C007B048D /* Splash */,
+				F484D04E2539F63C007B048D /* Auth */,
+				F4CEEEFA253829B900A37ECB /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F484D04D2539F459007B048D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F484D04E2539F63C007B048D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		F484D04F2539F66C007B048D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F484D0502539F7F8007B048D /* SplashVC.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		F4CEEEEA253829B900A37ECB = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +158,9 @@
 		F4CEEEF5253829B900A37ECB /* BluetoothConnectTest */ = {
 			isa = PBXGroup;
 			children = (
-				F4CEEEF6253829B900A37ECB /* AppDelegate.swift */,
-				F4CEEEFA253829B900A37ECB /* ViewController.swift */,
+				F484D04B2539F32C007B048D /* AppConfig */,
+				F484D04C2539F436007B048D /* Presentation */,
+				F484D04D2539F459007B048D /* Core */,
 				F484D0342539EDD7007B048D /* Supporting FIles */,
 			);
 			path = BluetoothConnectTest;
@@ -304,6 +347,7 @@
 			files = (
 				F4CEEEFB253829B900A37ECB /* ViewController.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
+				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
