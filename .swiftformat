@@ -1,6 +1,6 @@
 # file options
 
---exclude */Supporting Files
+--exclude **/Supporting Files
 --exclude R.generated.swift
 
 # format options

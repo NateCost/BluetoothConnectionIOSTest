@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
+		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
 		F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEF6253829B900A37ECB /* AppDelegate.swift */; };
 		F4CEEEFB253829B900A37ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEFA253829B900A37ECB /* ViewController.swift */; };
 		F4CEEEFE253829B900A37ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEEFC253829B900A37ECB /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
+		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothConnectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEEEF6253829B900A37ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CEEEFA253829B900A37ECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F484D0342539EDD7007B048D /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				F484D03A2539EE9F007B048D /* .gitignore */,
+				F484D0352539EE09007B048D /* .swiftformat */,
+				F4CEEF04253829BB00A37ECB /* Info.plist */,
+				F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */,
+				F4CEEEFC253829B900A37ECB /* Main.storyboard */,
+				F4CEEEFF253829BB00A37ECB /* Assets.xcassets */,
+			);
+			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
 		F4CEEEEA253829B900A37ECB = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +118,7 @@
 			children = (
 				F4CEEEF6253829B900A37ECB /* AppDelegate.swift */,
 				F4CEEEFA253829B900A37ECB /* ViewController.swift */,
-				F4CEEEFC253829B900A37ECB /* Main.storyboard */,
-				F4CEEEFF253829BB00A37ECB /* Assets.xcassets */,
-				F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */,
-				F4CEEF04253829BB00A37ECB /* Info.plist */,
+				F484D0342539EDD7007B048D /* Supporting FIles */,
 			);
 			path = BluetoothConnectTest;
 			sourceTree = "<group>";
@@ -238,6 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F484D03B2539EE9F007B048D /* .gitignore in Resources */,
+				F484D0362539EE09007B048D /* .swiftformat in Resources */,
 				F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */,
 				F4CEEF00253829BB00A37ECB /* Assets.xcassets in Resources */,
 				F4CEEEFE253829B900A37ECB /* Main.storyboard in Resources */,
@@ -277,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat --lint --lenient --verbose .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat --lint --verbose .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -465,7 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = BluetoothConnectTest/Info.plist;
+				INFOPLIST_FILE = "BluetoothConnectTest/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,7 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = BluetoothConnectTest/Info.plist;
+				INFOPLIST_FILE = "BluetoothConnectTest/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
