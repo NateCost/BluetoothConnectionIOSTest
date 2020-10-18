@@ -6,14 +6,14 @@
 import UIKit
 
 final class SplashVC: UIViewController {
-  lazy var logoImageView: UIImageView = {
+  private lazy var logoImageView: UIImageView = {
     let logoImageView = UIImageView(frame: .zero)
     logoImageView.translatesAutoresizingMaskIntoConstraints = false
     return logoImageView
   }()
   
-  lazy var spinnerView: UIView = {
-    let spinnerView = UIView(frame: .zero)
+  private lazy var spinnerView: SpinnerView = {
+    let spinnerView = SpinnerView(frame: .zero)
     spinnerView.translatesAutoresizingMaskIntoConstraints = false
     return spinnerView
   }()
@@ -21,12 +21,15 @@ final class SplashVC: UIViewController {
   override func loadView() {
     super.loadView()
     view.addSubview(logoImageView)
+    view.addSubview(spinnerView)
     layoutLogo()
+    layoutSpinner()
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     logoImageView.backgroundColor = .red
+    spinnerView.isHidden = false
     view.backgroundColor = .white
   }
 }
@@ -34,10 +37,19 @@ final class SplashVC: UIViewController {
 private extension SplashVC {
   func layoutLogo() {
     NSLayoutConstraint.activate([
-      logoImageView.widthAnchor.constraint(equalToConstant: 100),
+      logoImageView.widthAnchor.constraint(equalToConstant: 200),
       logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
       logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+    ])
+  }
+  
+  func layoutSpinner() {
+    NSLayoutConstraint.activate([
+      spinnerView.widthAnchor.constraint(equalToConstant: 40),
+      spinnerView.heightAnchor.constraint(equalTo: spinnerView.widthAnchor),
+      spinnerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      spinnerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200)
     ])
   }
 }

@@ -16,6 +16,7 @@
 		F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */; };
 		F4CEEF19253829BB00A37ECB /* BluetoothConnectTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEF18253829BB00A37ECB /* BluetoothConnectTestUITests.swift */; };
 		F4DC105D2538400D0074B211 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC105C2538400D0074B211 /* SwiftFormat */; };
+		F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F73A65253C384E00CB618A /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F4CEEF14253829BB00A37ECB /* BluetoothConnectTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothConnectTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEEF18253829BB00A37ECB /* BluetoothConnectTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectTestUITests.swift; sourceTree = "<group>"; };
 		F4CEEF1A253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F73A65253C384E00CB618A /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		F484D04C2539F436007B048D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F4F73A64253C383F00CB618A /* Common */,
 				F484D04F2539F66C007B048D /* Splash */,
 				F484D04E2539F63C007B048D /* Auth */,
 			);
@@ -176,6 +179,14 @@
 				F4CEEF1A253829BB00A37ECB /* Info.plist */,
 			);
 			path = BluetoothConnectTestUITests;
+			sourceTree = "<group>";
+		};
+		F4F73A64253C383F00CB618A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4F73A65253C384E00CB618A /* SpinnerView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
+				F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */,
 				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
