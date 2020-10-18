@@ -1,8 +1,6 @@
 //
-//  AppDelegate.swift
-//  BluetoothConnectTest
-//
-//  Created by Ilya Sakalou on 10/15/20.
+//  Created by Ilya Sakalou on 10/16/20.
+//  Copyright © 2020 Nirma Studio. All rights reserved.
 //
 
 import UIKit

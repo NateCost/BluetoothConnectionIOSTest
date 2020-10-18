@@ -12,6 +12,12 @@ final class SplashVC: UIViewController {
     return logoImageView
   }()
   
+  lazy var spinnerView: UIView = {
+    let spinnerView = UIView(frame: .zero)
+    spinnerView.translatesAutoresizingMaskIntoConstraints = false
+    return spinnerView
+  }()
+  
   override func loadView() {
     super.loadView()
     view.addSubview(logoImageView)
