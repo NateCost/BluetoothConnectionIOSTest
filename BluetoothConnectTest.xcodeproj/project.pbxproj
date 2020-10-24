@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41C2F1025440F6700D497D5 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F0F25440F6700D497D5 /* MenuItemView.swift */; };
+		F41C2F152544150E00D497D5 /* MenuItemViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F142544150E00D497D5 /* MenuItemViewTest.swift */; };
+		F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F1C2544160700D497D5 /* Typealiases.swift */; };
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
 		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F41C2F0F25440F6700D497D5 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		F41C2F142544150E00D497D5 /* MenuItemViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewTest.swift; sourceTree = "<group>"; };
+		F41C2F1C2544160700D497D5 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		F484D04D2539F459007B048D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F41C2F1C2544160700D497D5 /* Typealiases.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 		F4CEEF0C253829BB00A37ECB /* BluetoothConnectTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				F41C2F142544150E00D497D5 /* MenuItemViewTest.swift */,
 				F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */,
 				F4CEEF0F253829BB00A37ECB /* Info.plist */,
 			);
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F73A65253C384E00CB618A /* SpinnerView.swift */,
+				F41C2F0F25440F6700D497D5 /* MenuItemView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -349,7 +358,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41C2F1025440F6700D497D5 /* MenuItemView.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
+				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
 				F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */,
 				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 			);
@@ -359,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41C2F152544150E00D497D5 /* MenuItemViewTest.swift in Sources */,
 				F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
