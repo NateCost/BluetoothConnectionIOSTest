@@ -22,5 +22,7 @@ public class MenuItemView: UIView, MenuItem {
   public var actionCompletion: Handler?
   public var action: Handler?
   
-  public func activate() {}
+  public func activate() {
+    action?()
+  }
 }

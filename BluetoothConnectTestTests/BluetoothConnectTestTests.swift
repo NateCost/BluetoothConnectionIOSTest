@@ -1,8 +1,6 @@
 //
-//  BluetoothConnectTestTests.swift
-//  BluetoothConnectTestTests
-//
-//  Created by Ilya Sakalou on 10/15/20.
+//  Created by Ilya Sakalou on 10/24/20.
+//  Copyright © 2020 Nirma Studio. All rights reserved.
 //
 
 import XCTest

@@ -7,9 +7,20 @@ import XCTest
 @testable import BluetoothConnectTest
 
 class MenuItemViewTest: XCTestCase {
-  func testActionTriggered() {}
+  func testActionTriggered() {
+    var testActionCalled = false
+    let testAction: Handler = { testActionCalled = true }
+    let sut = makeSUT(action: testAction, actionCompletion: nil)
+    
+    sut.activate()
+    
+    XCTAssertTrue(testActionCalled)
+  }
   
   func makeSUT(action: Handler?, actionCompletion: Handler?) -> MenuItemView {
-    MenuItemView()
+    let sut = MenuItemView()
+    sut.action = action
+    sut.actionCompletion = actionCompletion
+    return sut
   }
 }
