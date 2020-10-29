@@ -17,20 +17,12 @@
 		F4CEEF00253829BB00A37ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEEFF253829BB00A37ECB /* Assets.xcassets */; };
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
 		F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */; };
-		F4CEEF19253829BB00A37ECB /* BluetoothConnectTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEF18253829BB00A37ECB /* BluetoothConnectTestUITests.swift */; };
 		F4DC105D2538400D0074B211 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC105C2538400D0074B211 /* SwiftFormat */; };
 		F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F73A65253C384E00CB618A /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F4CEEF0A253829BB00A37ECB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4CEEEEB253829B900A37ECB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4CEEEF2253829B900A37ECB;
-			remoteInfo = BluetoothConnectTest;
-		};
-		F4CEEF15253829BB00A37ECB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4CEEEEB253829B900A37ECB /* Project object */;
 			proxyType = 1;
@@ -54,9 +46,6 @@
 		F4CEEF09253829BB00A37ECB /* BluetoothConnectTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothConnectTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectTestTests.swift; sourceTree = "<group>"; };
 		F4CEEF0F253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4CEEF14253829BB00A37ECB /* BluetoothConnectTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothConnectTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4CEEF18253829BB00A37ECB /* BluetoothConnectTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectTestUITests.swift; sourceTree = "<group>"; };
-		F4CEEF1A253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4F73A65253C384E00CB618A /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,13 +59,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F4CEEF06253829BB00A37ECB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4CEEF11253829BB00A37ECB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,7 +126,6 @@
 			children = (
 				F4CEEEF5253829B900A37ECB /* BluetoothConnectTest */,
 				F4CEEF0C253829BB00A37ECB /* BluetoothConnectTestTests */,
-				F4CEEF17253829BB00A37ECB /* BluetoothConnectTestUITests */,
 				F4CEEEF4253829B900A37ECB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,7 +135,6 @@
 			children = (
 				F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */,
 				F4CEEF09253829BB00A37ECB /* BluetoothConnectTestTests.xctest */,
-				F4CEEF14253829BB00A37ECB /* BluetoothConnectTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,15 +158,6 @@
 				F4CEEF0F253829BB00A37ECB /* Info.plist */,
 			);
 			path = BluetoothConnectTestTests;
-			sourceTree = "<group>";
-		};
-		F4CEEF17253829BB00A37ECB /* BluetoothConnectTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F4CEEF18253829BB00A37ECB /* BluetoothConnectTestUITests.swift */,
-				F4CEEF1A253829BB00A37ECB /* Info.plist */,
-			);
-			path = BluetoothConnectTestUITests;
 			sourceTree = "<group>";
 		};
 		F4F73A64253C383F00CB618A /* Common */ = {
@@ -240,24 +211,6 @@
 			productReference = F4CEEF09253829BB00A37ECB /* BluetoothConnectTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F4CEEF13253829BB00A37ECB /* BluetoothConnectTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4CEEF23253829BB00A37ECB /* Build configuration list for PBXNativeTarget "BluetoothConnectTestUITests" */;
-			buildPhases = (
-				F4CEEF10253829BB00A37ECB /* Sources */,
-				F4CEEF11253829BB00A37ECB /* Frameworks */,
-				F4CEEF12253829BB00A37ECB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F4CEEF16253829BB00A37ECB /* PBXTargetDependency */,
-			);
-			name = BluetoothConnectTestUITests;
-			productName = BluetoothConnectTestUITests;
-			productReference = F4CEEF14253829BB00A37ECB /* BluetoothConnectTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,10 +225,6 @@
 						CreatedOnToolsVersion = 12.0.1;
 					};
 					F4CEEF08253829BB00A37ECB = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = F4CEEEF2253829B900A37ECB;
-					};
-					F4CEEF13253829BB00A37ECB = {
 						CreatedOnToolsVersion = 12.0.1;
 						TestTargetID = F4CEEEF2253829B900A37ECB;
 					};
@@ -299,7 +248,6 @@
 			targets = (
 				F4CEEEF2253829B900A37ECB /* BluetoothConnectTest */,
 				F4CEEF08253829BB00A37ECB /* BluetoothConnectTestTests */,
-				F4CEEF13253829BB00A37ECB /* BluetoothConnectTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,13 +265,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F4CEEF07253829BB00A37ECB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4CEEF12253829BB00A37ECB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -375,14 +316,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4CEEF10253829BB00A37ECB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4CEEF19253829BB00A37ECB /* BluetoothConnectTestUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -390,11 +323,6 @@
 			isa = PBXTargetDependency;
 			target = F4CEEEF2253829B900A37ECB /* BluetoothConnectTest */;
 			targetProxy = F4CEEF0A253829BB00A37ECB /* PBXContainerItemProxy */;
-		};
-		F4CEEF16253829BB00A37ECB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F4CEEEF2253829B900A37ECB /* BluetoothConnectTest */;
-			targetProxy = F4CEEF15253829BB00A37ECB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,46 +538,6 @@
 			};
 			name = Release;
 		};
-		F4CEEF24253829BB00A37ECB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = BluetoothConnectTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.BluetoothConnectTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BluetoothConnectTest;
-			};
-			name = Debug;
-		};
-		F4CEEF25253829BB00A37ECB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = BluetoothConnectTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.BluetoothConnectTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BluetoothConnectTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -676,15 +564,6 @@
 			buildConfigurations = (
 				F4CEEF21253829BB00A37ECB /* Debug */,
 				F4CEEF22253829BB00A37ECB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4CEEF23253829BB00A37ECB /* Build configuration list for PBXNativeTarget "BluetoothConnectTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4CEEF24253829BB00A37ECB /* Debug */,
-				F4CEEF25253829BB00A37ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
