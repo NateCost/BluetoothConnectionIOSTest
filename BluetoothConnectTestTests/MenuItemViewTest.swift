@@ -9,18 +9,53 @@ import XCTest
 class MenuItemViewTest: XCTestCase {
   func testActionTriggered() {
     var testActionCalled = false
-    let testAction: Handler = { testActionCalled = true }
-    let sut = makeSUT(action: testAction, actionCompletion: nil)
+    let testAction: (_ completion: Handler?) -> Void = { _ in
+      testActionCalled = true
+    }
+    let sut = makeSUT(action: testAction)
     
     sut.activate()
     
     XCTAssertTrue(testActionCalled)
   }
   
-  func makeSUT(action: Handler?, actionCompletion: Handler?) -> MenuItemView {
+  func testDefaultState() {
+    XCTAssertEqual(makeSUT().state, .deselected)
+  }
+  
+  func testSelectedStateTriggered() {
+    let sut = makeSUT(action: { _ in })
+    sut.activate()
+    XCTAssertEqual(sut.state, .selected)
+  }
+  
+  func testSelectedStateNotTriggeredWithoutAction() {
+    let sut = makeSUT()
+    sut.activate()
+    XCTAssertEqual(sut.state, .deselected)
+  }
+  
+  func testDeselectedStateOnActionCompletion() {
+    let expectation = XCTestExpectation(description: "")
+    let testAction: (_ completion: Handler?) -> Void = { completion in
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        completion?()
+        expectation.fulfill()
+      }
+    }
+    let sut = makeSUT(action: testAction)
+    sut.activate()
+    
+    XCTAssertEqual(sut.state, .selected)
+    wait(for: [expectation], timeout: 1.0)
+    XCTAssertEqual(sut.state, .deselected)
+  }
+  
+  func makeSUT(
+    action: ((_ completion: Handler?) -> Void)? = nil
+  ) -> MenuItem {
     let sut = MenuItemView()
     sut.action = action
-    sut.actionCompletion = actionCompletion
     return sut
   }
 }

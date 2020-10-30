@@ -12,17 +12,21 @@ public enum MenuItemState {
 
 public protocol MenuItem {
   func activate()
-  var actionCompletion: Handler? { get set }
-  var action: Handler? { get set }
+  var action: ((_ completion: Handler?) -> Void)? { get set }
   var state: MenuItemState { get }
 }
 
 public class MenuItemView: UIView, MenuItem {
   public var state: MenuItemState = .deselected
-  public var actionCompletion: Handler?
-  public var action: Handler?
+  public var action: ((_ completion: Handler?) -> Void)?
   
   public func activate() {
-    action?()
+    guard let action = action else { return }
+    action(actionCompleted)
+    state = .selected
+  }
+  
+  private func actionCompleted() {
+    state = .deselected
   }
 }
