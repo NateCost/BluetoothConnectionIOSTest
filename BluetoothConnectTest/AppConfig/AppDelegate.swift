@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     
     if let window = window {
-      let splash = SplashVC()
+      let splash = SplashVC(output: SplashPresenter())
       
       window.rootViewController = splash
       window.makeKeyAndVisible()

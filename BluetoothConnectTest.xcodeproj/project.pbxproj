@@ -13,6 +13,8 @@
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
 		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
+		F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94891254CAC830084E557 /* SplashComposer.swift */; };
+		F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashPresenter.swift */; };
 		F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEF6253829B900A37ECB /* AppDelegate.swift */; };
 		F4CEEF00253829BB00A37ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEEFF253829BB00A37ECB /* Assets.xcassets */; };
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
@@ -38,6 +40,8 @@
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		F4B94891254CAC830084E557 /* SplashComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComposer.swift; sourceTree = "<group>"; };
+		F4B94895254CAFE20084E557 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothConnectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEEEF6253829B900A37ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CEEEFF253829BB00A37ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				F484D0502539F7F8007B048D /* SplashVC.swift */,
+				F4B94895254CAFE20084E557 /* SplashPresenter.swift */,
+				F4B94891254CAC830084E557 /* SplashComposer.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -300,9 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
+				F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
 				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
 				F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */,
+				F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */,
 				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
