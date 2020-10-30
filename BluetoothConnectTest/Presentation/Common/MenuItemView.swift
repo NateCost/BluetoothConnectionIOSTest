@@ -10,13 +10,17 @@ public enum MenuItemState {
   case selected
 }
 
+public protocol Selectable {
+  func setState()
+}
+
 public protocol MenuItem {
   func activate()
   var action: ((_ completion: Handler?) -> Void)? { get set }
   var state: MenuItemState { get }
 }
 
-public class MenuItemView: UIView, MenuItem {
+public class MenuItemControl: MenuItem {
   public var state: MenuItemState = .deselected
   public var action: ((_ completion: Handler?) -> Void)?
   

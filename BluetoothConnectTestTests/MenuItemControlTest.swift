@@ -6,7 +6,7 @@
 import XCTest
 @testable import BluetoothConnectTest
 
-class MenuItemViewTest: XCTestCase {
+class MenuItemControlTest: XCTestCase {
   func testActionTriggered() {
     var testActionCalled = false
     let testAction: (_ completion: Handler?) -> Void = { _ in
@@ -51,11 +51,30 @@ class MenuItemViewTest: XCTestCase {
     XCTAssertEqual(sut.state, .deselected)
   }
   
+  func testSelectableChangeState() {
+    let selectable = SelectableSpy()
+    let sut = makeSUT(action: { _ in }, selectable: selectable)
+    
+    sut.activate()
+    
+    XCTAssertEqual(selectable.state, .selected)
+  }
+  
   func makeSUT(
-    action: ((_ completion: Handler?) -> Void)? = nil
+    action: ((_ completion: Handler?) -> Void)? = nil,
+    selectable: SelectableSpy = SelectableSpy()
   ) -> MenuItem {
-    let sut = MenuItemView()
+    let sut = MenuItemControl(item: selectable)
     sut.action = action
     return sut
+  }
+  
+  final class SelectableSpy: Selectable {
+    typealias State = SelectionState
+    var state: SelectionState = .deselected
+    
+    func setState(_ state: SelectionState) {
+      self.state = state
+    }
   }
 }
