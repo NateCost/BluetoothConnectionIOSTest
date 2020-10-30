@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F41C2F1025440F6700D497D5 /* MenuItemControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F0F25440F6700D497D5 /* MenuItemControl.swift */; };
-		F41C2F152544150E00D497D5 /* MenuItemControlTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F142544150E00D497D5 /* MenuItemControlTest.swift */; };
+		F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */; };
+		F41C2F152544150E00D497D5 /* ActivatableItemControlTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */; };
 		F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F1C2544160700D497D5 /* Typealiases.swift */; };
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
@@ -32,8 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F41C2F0F25440F6700D497D5 /* MenuItemControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemControl.swift; sourceTree = "<group>"; };
-		F41C2F142544150E00D497D5 /* MenuItemControlTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemControlTest.swift; sourceTree = "<group>"; };
+		F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatebleItemControl.swift; sourceTree = "<group>"; };
+		F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatableItemControlTest.swift; sourceTree = "<group>"; };
 		F41C2F1C2544160700D497D5 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
@@ -153,7 +153,7 @@
 		F4CEEF0C253829BB00A37ECB /* BluetoothConnectTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				F41C2F142544150E00D497D5 /* MenuItemControlTest.swift */,
+				F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */,
 				F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */,
 				F4CEEF0F253829BB00A37ECB /* Info.plist */,
 			);
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F73A65253C384E00CB618A /* SpinnerView.swift */,
-				F41C2F0F25440F6700D497D5 /* MenuItemControl.swift */,
+				F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F41C2F1025440F6700D497D5 /* MenuItemControl.swift in Sources */,
+				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
 				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
 				F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */,
@@ -311,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F41C2F152544150E00D497D5 /* MenuItemControlTest.swift in Sources */,
+				F41C2F152544150E00D497D5 /* ActivatableItemControlTest.swift in Sources */,
 				F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

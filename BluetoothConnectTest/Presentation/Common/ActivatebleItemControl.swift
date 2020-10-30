@@ -5,25 +5,25 @@
 
 import UIKit
 
-public enum SelectionState {
-  case deselected
-  case selected
+public enum ActivationState {
+  case inactive
+  case active
 }
 
-public protocol MenuItem {
+public protocol ActivatableItem {
   func activate()
   var action: ((_ completion: Handler?) -> Void)? { get set }
-  var state: SelectionState { get }
+  var state: ActivationState { get }
 }
 
-public class MenuItemControl<
+public class ActivatableItemControl<
   Item: Selectable
->: MenuItem where Item.State == SelectionState {
+>: ActivatableItem where Item.State == ActivationState {
   private let item: Item
-  public var state: SelectionState = .deselected {
+  public var action: ((_ completion: Handler?) -> Void)?
+  public var state: ActivationState = .inactive {
     didSet { item.setState(state) }
   }
-  public var action: ((_ completion: Handler?) -> Void)?
   
   public init(item: Item) {
     self.item = item
@@ -32,11 +32,11 @@ public class MenuItemControl<
   public func activate() {
     guard let action = action else { return }
     action(actionCompleted)
-    state = .selected
+    state = .active
   }
   
   private func actionCompleted() {
-    state = .deselected
+    state = .inactive
   }
 }
 
@@ -46,9 +46,7 @@ public protocol Selectable {
 }
 
 final class SelectableButton: UIButton, Selectable {
-  typealias State = SelectionState
+  typealias State = ActivationState
   
-  func setState(_ state: SelectionState) {
-    
-  }
+  func setState(_ state: ActivationState) {}
 }

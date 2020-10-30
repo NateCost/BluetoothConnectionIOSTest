@@ -20,19 +20,19 @@ class MenuItemControlTest: XCTestCase {
   }
   
   func testDefaultState() {
-    XCTAssertEqual(makeSUT().state, .deselected)
+    XCTAssertEqual(makeSUT().state, .inactive)
   }
   
   func testSelectedStateTriggered() {
     let sut = makeSUT(action: { _ in })
     sut.activate()
-    XCTAssertEqual(sut.state, .selected)
+    XCTAssertEqual(sut.state, .active)
   }
   
   func testSelectedStateNotTriggeredWithoutAction() {
     let sut = makeSUT()
     sut.activate()
-    XCTAssertEqual(sut.state, .deselected)
+    XCTAssertEqual(sut.state, .inactive)
   }
   
   func testDeselectedStateOnActionCompletion() {
@@ -46,9 +46,9 @@ class MenuItemControlTest: XCTestCase {
     let sut = makeSUT(action: testAction)
     sut.activate()
     
-    XCTAssertEqual(sut.state, .selected)
+    XCTAssertEqual(sut.state, .active)
     wait(for: [expectation], timeout: 1.0)
-    XCTAssertEqual(sut.state, .deselected)
+    XCTAssertEqual(sut.state, .inactive)
   }
   
   func testSelectableChangeState() {
@@ -57,23 +57,23 @@ class MenuItemControlTest: XCTestCase {
     
     sut.activate()
     
-    XCTAssertEqual(selectable.state, .selected)
+    XCTAssertEqual(selectable.state, .active)
   }
   
   func makeSUT(
     action: ((_ completion: Handler?) -> Void)? = nil,
     selectable: SelectableSpy = SelectableSpy()
-  ) -> MenuItem {
-    let sut = MenuItemControl(item: selectable)
+  ) -> ActivatableItem {
+    let sut = ActivatableItemControl(item: selectable)
     sut.action = action
     return sut
   }
   
   final class SelectableSpy: Selectable {
-    typealias State = SelectionState
-    var state: SelectionState = .deselected
+    typealias State = ActivationState
+    var state: State = .inactive
     
-    func setState(_ state: SelectionState) {
+    func setState(_ state: State) {
       self.state = state
     }
   }
