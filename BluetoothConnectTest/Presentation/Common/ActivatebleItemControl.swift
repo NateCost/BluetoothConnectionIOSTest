@@ -19,10 +19,10 @@ public protocol ActivatableItem {
 public class ActivatableItemControl<
   Item: Selectable
 >: ActivatableItem where Item.State == ActivationState {
-  private let item: Item
+  private weak var item: Item?
   public var action: ((_ completion: Handler?) -> Void)?
   public var state: ActivationState = .inactive {
-    didSet { item.setState(state) }
+    didSet { item?.setState(state) }
   }
   
   public init(item: Item) {
@@ -40,7 +40,7 @@ public class ActivatableItemControl<
   }
 }
 
-public protocol Selectable {
+public protocol Selectable: class {
   associatedtype State
   func setState(_ state: State)
 }

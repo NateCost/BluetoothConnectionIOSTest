@@ -12,13 +12,23 @@ final class SplashVC: UIViewController {
     return logoImageView
   }()
   
-  lazy var spinnerView: SpinnerView = {
+  private lazy var spinnerView: SpinnerView = {
     let spinnerView = SpinnerView(frame: .zero)
     spinnerView.translatesAutoresizingMaskIntoConstraints = false
     return spinnerView
   }()
   
   var output: SplashViewOutput?
+  var loadController: ActivatableItem?
+  
+  init() {
+    super.init(nibName: nil, bundle: nil)
+    loadController = ActivatableItemControl(item: spinnerView)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
   
   override func loadView() {
     super.loadView()

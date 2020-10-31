@@ -8,7 +8,7 @@ import UIKit
 // MARK: - SplashViewOutput
 extension SplashPresenter: SplashViewOutput {
   func viewDidLoad() {
-    loadController.activate()
+    view.loadController?.activate()
   }
 }
 // MARK: - SplashPresenter
@@ -22,6 +22,15 @@ extension SplashPresenter {
     }
   }
   
+  func testLoad() -> (Handler?) -> Void {{ [weak self] completion in
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+      completion?()
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+        self?.transiteToMainMenu()
+      }
+    }
+  }}
+  
   func transiteToMainMenu() {
     let mainMenuComposer = MainMenuComposer.compose()
     AppDelegate.shared.changeRootViewControllerTo(mainMenuComposer.viewController)
@@ -30,11 +39,10 @@ extension SplashPresenter {
 
 final class SplashPresenter {
   weak var view: SplashViewInput!
-  var loadController: ActivatableItem
   
-  init(view: SplashViewInput, loadController: ActivatableItem) {
+  init(view: SplashViewInput) {
     self.view = view
-    self.loadController = loadController
-    self.loadController.action = loadRequiredData(completion:)
+    self.view.loadController?.action = loadRequiredData(completion:)
+    // self.view.loadController?.action = testLoad()
   }
 }

@@ -11,8 +11,7 @@ final class SplashComposer {
   class func compose() -> SplashComposer {
     let controller = SplashVC()
     let presenter = SplashPresenter(
-      view: controller,
-      loadController: ActivatableItemControl(item: controller.spinnerView)
+      view: controller
     )
     controller.output = presenter
     return SplashComposer(viewController: controller)
@@ -23,7 +22,9 @@ final class SplashComposer {
   }
 }
 
-protocol SplashViewInput: class {}
+protocol SplashViewInput: class {
+  var loadController: ActivatableItem? { get set }
+}
 
 protocol SplashViewOutput: class {
   func viewDidLoad()

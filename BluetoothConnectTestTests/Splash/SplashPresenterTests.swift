@@ -7,19 +7,25 @@ import XCTest
 @testable import BluetoothConnectTest
 
 class SplashPresenterTest: XCTestCase {
+  var view: SplashViewInput?
+  
   func testViewDidLoadActivateLoading() {
     let sut = makeSUT()
     sut.viewDidLoad()
-    XCTAssertEqual(sut.loadController.state, .active)
+    XCTAssertEqual(sut.view.loadController!.state, .active)
   }
   
   func makeSUT(view: SplashViewInput? = SplashViewSpy()) -> SplashPresenter {
-    let loadController = ActivatableItemControl(item: ActivatableItemSpy())
-    let sut = SplashPresenter(view: view!, loadController: loadController)
+    self.view = view
+    self.view!.loadController = ActivatableItemControl(item: ActivatableItemSpy())
+    let sut = SplashPresenter(view: self.view!)
+    
     return sut
   }
   
-  final class SplashViewSpy: SplashViewInput {}
+  final class SplashViewSpy: SplashViewInput {
+    var loadController: ActivatableItem?
+  }
   
   final class ActivatableItemSpy: Selectable {
     func setState(_ state: ActivationState) {}
