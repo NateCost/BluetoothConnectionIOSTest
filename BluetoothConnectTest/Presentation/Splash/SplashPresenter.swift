@@ -25,6 +25,7 @@ final class SplashPresenter {
   var loadController: ActivatableItem
   
   init(view: SplashViewInput, loadController: ActivatableItem) {
+    self.view = view
     self.loadController = loadController
     self.loadController.action = loadRequiredData(completion:)
   }
