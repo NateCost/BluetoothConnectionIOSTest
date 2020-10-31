@@ -23,4 +23,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     return true
   }
+  
+  func changeRootViewControllerTo(_ viewController: UIViewController) {
+    let snapshot: UIView = (window?.snapshotView(afterScreenUpdates: true))!
+    viewController.view.addSubview(snapshot)
+    
+    window?.rootViewController = viewController
+    
+    UIView.animate(withDuration: 0.3, animations: { () in
+      snapshot.layer.opacity = 0
+      snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
+    }, completion: { _ in
+      snapshot.removeFromSuperview()
+    })
+  }
+}
+// MARK: - AppDelegate
+// swiftlint:disable force_cast
+extension AppDelegate {
+  static var shared = UIApplication.shared.delegate as! AppDelegate
 }

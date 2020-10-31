@@ -3,7 +3,7 @@
 //  Copyright © 2020 Nirma Studio. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - SplashViewOutput
 extension SplashPresenter: SplashViewOutput {
@@ -16,7 +16,15 @@ extension SplashPresenter {
   func loadRequiredData(completion: Handler?) {
     DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
       completion?()
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+        self?.transiteToMainMenu()
+      }
     }
+  }
+  
+  func transiteToMainMenu() {
+    let mainMenuComposer = MainMenuComposer.compose()
+    AppDelegate.shared.changeRootViewControllerTo(mainMenuComposer.viewController)
   }
 }
 
