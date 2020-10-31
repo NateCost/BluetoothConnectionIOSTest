@@ -15,6 +15,7 @@
 		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
 		F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94891254CAC830084E557 /* SplashComposer.swift */; };
 		F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashPresenter.swift */; };
+		F4B9489D254DD8770084E557 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */; };
 		F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEF6253829B900A37ECB /* AppDelegate.swift */; };
 		F4CEEF00253829BB00A37ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEEFF253829BB00A37ECB /* Assets.xcassets */; };
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F4B94891254CAC830084E557 /* SplashComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComposer.swift; sourceTree = "<group>"; };
 		F4B94895254CAFE20084E557 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
 		F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothConnectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEEEF6253829B900A37ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CEEEFF253829BB00A37ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		F4B9489B254DD8570084E557 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		F4CEEEEA253829B900A37ECB = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 		F4CEEF0C253829BB00A37ECB /* BluetoothConnectTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				F4B9489B254DD8570084E557 /* Splash */,
 				F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */,
 				F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */,
 				F4CEEF0F253829BB00A37ECB /* Info.plist */,
@@ -320,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41C2F152544150E00D497D5 /* ActivatableItemControlTest.swift in Sources */,
+				F4B9489D254DD8770084E557 /* SplashPresenterTests.swift in Sources */,
 				F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
