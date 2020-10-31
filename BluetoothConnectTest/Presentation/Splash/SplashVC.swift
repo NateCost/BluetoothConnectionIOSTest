@@ -18,17 +18,7 @@ final class SplashVC: UIViewController {
     return spinnerView
   }()
   
-  let output: SplashViewOutput
-  
-  init(output: SplashViewOutput) {
-    self.output = output
-    super.init(nibName: nil, bundle: nil)
-  }
-  
-  @available(*, unavailable)
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
+  var output: SplashViewOutput?
   
   override func loadView() {
     super.loadView()
@@ -40,10 +30,15 @@ final class SplashVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    output?.viewDidLoad()
     logoImageView.backgroundColor = .red
     spinnerView.isHidden = false
     view.backgroundColor = .white
   }
+}
+// MARK: - SplashViewInput
+extension SplashVC: SplashViewInput {
+  var spinner: ActivatableItem { ActivatableItemControl<SpinnerView>(item: spinnerView) }
 }
 // MARK: - Layout
 private extension SplashVC {

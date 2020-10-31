@@ -9,8 +9,10 @@ final class SplashComposer {
   let viewController: SplashVC
   
   class func compose() -> SplashComposer {
-    let presenter = SplashPresenter()
-    return SplashComposer(viewController: SplashVC(output: presenter))
+    let controller = SplashVC()
+    let presenter = SplashPresenter(view: controller, loadController: controller.spinner)
+    controller.output = presenter
+    return SplashComposer(viewController: controller)
   }
   
   private init(viewController: SplashVC) {
@@ -19,4 +21,7 @@ final class SplashComposer {
 }
 
 protocol SplashViewInput: class {}
-protocol SplashViewOutput: class {}
+
+protocol SplashViewOutput: class {
+  func viewDidLoad()
+}

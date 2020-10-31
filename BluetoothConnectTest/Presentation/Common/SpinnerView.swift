@@ -5,18 +5,13 @@
 
 import UIKit
 
-public protocol Spinner: class {
-  func startSpinning()
-  func stopSpinning()
-}
-
-public class SpinnerView: UIView, Spinner {
+public class SpinnerView: UIView, Selectable {
   public override func willMove(toSuperview newSuperview: UIView?) {
     super.willMove(toSuperview: newSuperview)
     backgroundColor = .black
   }
   
-  public func startSpinning() {}
-  
-  public func stopSpinning() {}
+  public func setState(_ state: ActivationState) {
+    
+  }
 }
