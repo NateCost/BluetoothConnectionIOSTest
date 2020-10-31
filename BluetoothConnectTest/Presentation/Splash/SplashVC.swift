@@ -12,7 +12,7 @@ final class SplashVC: UIViewController {
     return logoImageView
   }()
   
-  private lazy var spinnerView: SpinnerView = {
+  lazy var spinnerView: SpinnerView = {
     let spinnerView = SpinnerView(frame: .zero)
     spinnerView.translatesAutoresizingMaskIntoConstraints = false
     return spinnerView
@@ -37,9 +37,7 @@ final class SplashVC: UIViewController {
   }
 }
 // MARK: - SplashViewInput
-extension SplashVC: SplashViewInput {
-  var spinner: ActivatableItem { ActivatableItemControl<SpinnerView>(item: spinnerView) }
-}
+extension SplashVC: SplashViewInput {}
 // MARK: - Layout
 private extension SplashVC {
   func layoutLogo() {

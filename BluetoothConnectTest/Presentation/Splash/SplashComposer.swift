@@ -10,7 +10,10 @@ final class SplashComposer {
   
   class func compose() -> SplashComposer {
     let controller = SplashVC()
-    let presenter = SplashPresenter(view: controller, loadController: controller.spinner)
+    let presenter = SplashPresenter(
+      view: controller,
+      loadController: ActivatableItemControl(item: controller.spinnerView)
+    )
     controller.output = presenter
     return SplashComposer(viewController: controller)
   }

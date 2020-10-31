@@ -6,12 +6,32 @@
 import UIKit
 
 public class SpinnerView: UIView, Selectable {
+  private let internalSpinner = UIActivityIndicatorView()
+  
+  public override func layoutSubviews() {
+    super.layoutSubviews()
+    internalSpinner.translatesAutoresizingMaskIntoConstraints = false
+    addSubview(internalSpinner)
+    NSLayoutConstraint.activate([
+      internalSpinner.widthAnchor.constraint(equalTo: widthAnchor),
+      internalSpinner.heightAnchor.constraint(equalTo: heightAnchor),
+      internalSpinner.centerXAnchor.constraint(equalTo: centerXAnchor),
+      internalSpinner.centerYAnchor.constraint(equalTo: centerYAnchor)
+    ])
+  }
+  
   public override func willMove(toSuperview newSuperview: UIView?) {
     super.willMove(toSuperview: newSuperview)
-    backgroundColor = .black
   }
   
   public func setState(_ state: ActivationState) {
-    
+    switch state {
+      case .active:
+        internalSpinner.alpha = 1.0
+        internalSpinner.startAnimating()
+      case .inactive:
+        internalSpinner.alpha = 0.0
+        internalSpinner.stopAnimating()
+    }
   }
 }

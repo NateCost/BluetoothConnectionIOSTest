@@ -5,15 +5,18 @@
 
 import Foundation
 
+// MARK: - SplashViewOutput
 extension SplashPresenter: SplashViewOutput {
   func viewDidLoad() {
-    loadController.action = { completion in
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-        completion?()
-      }
-    }
-    
     loadController.activate()
+  }
+}
+// MARK: - SplashPresenter
+extension SplashPresenter {
+  func loadRequiredData(completion: Handler?) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+      completion?()
+    }
   }
 }
 
@@ -23,5 +26,6 @@ final class SplashPresenter {
   
   init(view: SplashViewInput, loadController: ActivatableItem) {
     self.loadController = loadController
+    self.loadController.action = loadRequiredData(completion:)
   }
 }
