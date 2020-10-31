@@ -51,3 +51,4 @@
 --disable consecutiveSpaces
 --disable hoistPatternLet
 --disable trailingCommas
+--disable spaceInsideBraces
