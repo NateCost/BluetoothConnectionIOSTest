@@ -18,10 +18,12 @@ final class SplashVC: UIViewController {
     return spinnerView
   }()
   
+  let colorPalette: ColorPalette
   var output: SplashViewOutput?
   var loadController: ActivatableItem?
   
-  init() {
+  init(colorPalette: ColorPalette) {
+    self.colorPalette = colorPalette
     super.init(nibName: nil, bundle: nil)
     loadController = ActivatableItemControl(item: spinnerView)
   }
@@ -41,9 +43,10 @@ final class SplashVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     output?.viewDidLoad()
-    logoImageView.backgroundColor = .red
+    logoImageView.backgroundColor = colorPalette.secondaryColor
     spinnerView.isHidden = false
-    view.backgroundColor = .white
+    spinnerView.setColor(colorPalette.spinnerColor)
+    view.backgroundColor = colorPalette.mainBackgroundColor
   }
 }
 // MARK: - SplashViewInput

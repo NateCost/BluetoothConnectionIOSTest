@@ -9,7 +9,7 @@ final class MainMenuComposer {
   let viewController: MainMenuVC
   
   class func compose() -> MainMenuComposer {
-    let controller = MainMenuVC()
+    let controller = MainMenuVC(colorPalette: RegularIOSPalette())
     let presenter = MainMenuPresenter(
       view: controller
     )

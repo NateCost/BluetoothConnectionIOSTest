@@ -9,7 +9,7 @@ final class SplashComposer {
   let viewController: SplashVC
   
   class func compose() -> SplashComposer {
-    let controller = SplashVC()
+    let controller = SplashVC(colorPalette: RegularIOSPalette())
     let presenter = SplashPresenter(
       view: controller
     )

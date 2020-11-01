@@ -24,6 +24,8 @@ public class SpinnerView: UIView, Selectable {
     super.willMove(toSuperview: newSuperview)
   }
   
+  public func setColor(_ color: UIColor) { internalSpinner.color = color }
+  
   public func setState(_ state: ActivationState) {
     switch state {
       case .active:
