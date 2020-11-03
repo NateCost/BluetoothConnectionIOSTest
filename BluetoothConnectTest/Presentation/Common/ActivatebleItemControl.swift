@@ -44,9 +44,3 @@ public protocol Selectable: class {
   associatedtype State
   func setState(_ state: State)
 }
-
-final class SelectableButton: UIButton, Selectable {
-  typealias State = ActivationState
-  
-  func setState(_ state: ActivationState) {}
-}
