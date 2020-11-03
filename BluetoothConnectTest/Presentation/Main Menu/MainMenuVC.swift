@@ -5,11 +5,13 @@
 
 import UIKit
 
-final class MainMenuVC: UIViewController {
-  let colorPalette: ColorPalette
+final class MainMenuVC<Palette: ColorPalette>: UIViewController {
+  private lazy var startButton: SelectableButton = { SelectableButton(frame: .zero) }()
+  
+  let colorPalette: Palette
   var output: MainMenuViewOutput?
   
-  init(colorPalette: ColorPalette) {
+  init(colorPalette: Palette) {
     self.colorPalette = colorPalette
     super.init(nibName: nil, bundle: nil)
   }

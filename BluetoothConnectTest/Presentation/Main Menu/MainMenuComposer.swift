@@ -6,10 +6,10 @@
 import Foundation
 
 final class MainMenuComposer {
-  let viewController: MainMenuVC
+  let viewController: MainMenuVC<IOSPalette>
   
   class func compose() -> MainMenuComposer {
-    let controller = MainMenuVC(colorPalette: RegularIOSPalette())
+    let controller = MainMenuVC<IOSPalette>(colorPalette: .default)
     let presenter = MainMenuPresenter(
       view: controller
     )
@@ -17,7 +17,7 @@ final class MainMenuComposer {
     return MainMenuComposer(viewController: controller)
   }
   
-  private init(viewController: MainMenuVC) {
+  private init(viewController: MainMenuVC<IOSPalette>) {
     self.viewController = viewController
   }
 }
