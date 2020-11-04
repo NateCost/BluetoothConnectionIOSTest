@@ -24,7 +24,6 @@
 		F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEF6253829B900A37ECB /* AppDelegate.swift */; };
 		F4CEEF00253829BB00A37ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEEFF253829BB00A37ECB /* Assets.xcassets */; };
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
-		F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */; };
 		F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA4BC3254E958C00C3F78F /* ColorPalette.swift */; };
 		F4DC105D2538400D0074B211 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC105C2538400D0074B211 /* SwiftFormat */; };
 		F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F73A65253C384E00CB618A /* SpinnerView.swift */; };
@@ -61,7 +60,6 @@
 		F4CEEF02253829BB00A37ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4CEEF04253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4CEEF09253829BB00A37ECB /* BluetoothConnectTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothConnectTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectTestTests.swift; sourceTree = "<group>"; };
 		F4CEEF0F253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DA4BC3254E958C00C3F78F /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		F4F73A65253C384E00CB618A /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				F4B9489B254DD8570084E557 /* Splash */,
 				F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */,
 				F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */,
-				F4CEEF0D253829BB00A37ECB /* BluetoothConnectTestTests.swift */,
 				F4CEEF0F253829BB00A37ECB /* Info.plist */,
 			);
 			path = BluetoothConnectTestTests;
@@ -364,7 +361,6 @@
 				F4A65CC42551ABB0003F27BE /* CommonUIComponentsTest.swift in Sources */,
 				F41C2F152544150E00D497D5 /* ActivatableItemControlTest.swift in Sources */,
 				F4B9489D254DD8770084E557 /* SplashPresenterTests.swift in Sources */,
-				F4CEEF0E253829BB00A37ECB /* BluetoothConnectTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

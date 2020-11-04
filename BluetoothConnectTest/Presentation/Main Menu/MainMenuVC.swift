@@ -7,13 +7,21 @@ import UIKit
 
 final class MainMenuVC<Palette: ColorPalette>: UIViewController {
   private lazy var startButton: SelectableButton = { SelectableButton(frame: .zero) }()
+  private lazy var settingsButton: SelectableButton = { SelectableButton(frame: .zero) }()
+  private lazy var aboutButton: SelectableButton = { SelectableButton(frame: .zero) }()
   
-  let colorPalette: Palette
+  private let colorPalette: Palette
   var output: MainMenuViewOutput?
+  var startController: ActivatableItem?
+  var settingsController: ActivatableItem?
+  var aboutController: ActivatableItem?
   
   init(colorPalette: Palette) {
     self.colorPalette = colorPalette
     super.init(nibName: nil, bundle: nil)
+    startController = ActivatableItemControl(item: startButton)
+    settingsController = ActivatableItemControl(item: settingsButton)
+    aboutController = ActivatableItemControl(item: aboutButton)
   }
   
   required init?(coder: NSCoder) {

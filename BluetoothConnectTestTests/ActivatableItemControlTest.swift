@@ -60,6 +60,19 @@ class MenuItemControlTest: XCTestCase {
     XCTAssertEqual(selectable.state, .active)
   }
   
+  func testActivatableItemBindActionHandler() {
+    var testActionCalled = false
+    let testAction: (_ completion: Handler?) -> Void = { _ in
+      testActionCalled = true
+    }
+    let selectable = SelectableSpy()
+    _ = makeSUT(action: testAction, selectable: selectable)
+    
+    selectable.tapAction?()
+    
+    XCTAssertTrue(testActionCalled)
+  }
+  
   func makeSUT(
     action: ((_ completion: Handler?) -> Void)? = nil,
     selectable: SelectableSpy = SelectableSpy()
@@ -71,6 +84,7 @@ class MenuItemControlTest: XCTestCase {
   
   final class SelectableSpy: Selectable {
     typealias State = ActivationState
+    var tapAction: Handler?
     var state: State = .inactive
     
     func setState(_ state: State) {

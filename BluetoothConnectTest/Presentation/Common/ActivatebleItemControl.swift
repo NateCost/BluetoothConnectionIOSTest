@@ -27,6 +27,7 @@ public class ActivatableItemControl<
   
   public init(item: Item) {
     self.item = item
+    item.tapAction = activate
   }
   
   public func activate() {
@@ -43,4 +44,5 @@ public class ActivatableItemControl<
 public protocol Selectable: class {
   associatedtype State
   func setState(_ state: State)
+  var tapAction: Handler? { get set }
 }

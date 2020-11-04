@@ -6,6 +6,7 @@
 import UIKit
 
 public class SpinnerView: UIView, Selectable {
+  public var tapAction: Handler?
   private let internalSpinner = UIActivityIndicatorView()
   
   public override func layoutSubviews() {

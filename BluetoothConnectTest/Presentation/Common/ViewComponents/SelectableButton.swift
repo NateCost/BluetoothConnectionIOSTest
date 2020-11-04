@@ -9,10 +9,16 @@ final class SelectableButton: UIButton, Selectable {
   typealias State = ActivationState
   
   func setState(_ state: ActivationState) {}
+  var tapAction: Handler?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
     translatesAutoresizingMaskIntoConstraints = false
+    addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
+  }
+  
+  @IBAction private func buttonDidTap() {
+    tapAction?()
   }
   
   required init?(coder: NSCoder) {

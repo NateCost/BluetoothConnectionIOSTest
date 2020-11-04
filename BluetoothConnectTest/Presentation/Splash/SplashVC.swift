@@ -18,7 +18,7 @@ final class SplashVC: UIViewController {
     return spinnerView
   }()
   
-  let colorPalette: ColorPalette
+  private let colorPalette: ColorPalette
   var output: SplashViewOutput?
   var loadController: ActivatableItem?
   

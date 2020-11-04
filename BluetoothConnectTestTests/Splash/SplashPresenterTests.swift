@@ -28,6 +28,7 @@ class SplashPresenterTest: XCTestCase {
   }
   
   final class ActivatableItemSpy: Selectable {
+    var tapAction: Handler?
     func setState(_ state: ActivationState) {}
   }
 }
