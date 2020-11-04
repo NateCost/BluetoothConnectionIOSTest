@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "BLOC_Illustration_Bear_Linoprint-2.jpg",
+      "filename" : "bear_logo-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "BLOC_Illustration_Bear_Linoprint-1.jpg",
+      "filename" : "bear_logo-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "BLOC_Illustration_Bear_Linoprint.jpg",
+      "filename" : "bear_logo.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

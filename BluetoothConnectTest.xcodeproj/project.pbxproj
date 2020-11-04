@@ -17,6 +17,7 @@
 		F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CCC2551AC34003F27BE /* SelectableButton.swift */; };
 		F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CE62552BC17003F27BE /* SceneDelegate.swift */; };
 		F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEA2552BCCF003F27BE /* SplashView.swift */; };
+		F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */; };
 		F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94891254CAC830084E557 /* SplashComposer.swift */; };
 		F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashPresenter.swift */; };
 		F4B9489D254DD8770084E557 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */; };
@@ -52,6 +53,7 @@
 		F4A65CCC2551AC34003F27BE /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		F4A65CE62552BC17003F27BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F4A65CEA2552BCCF003F27BE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		F4B94891254CAC830084E557 /* SplashComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComposer.swift; sourceTree = "<group>"; };
 		F4B94895254CAFE20084E557 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				F4B948A3254DDE580084E557 /* MainMenuVC.swift */,
 				F4B948A9254DDE6C0084E557 /* MainMenuPresenter.swift */,
 				F4B948AD254DDE780084E557 /* MainMenuComposer.swift */,
+				F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */,
 			);
 			path = "Main Menu";
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */,
 				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
 				F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,

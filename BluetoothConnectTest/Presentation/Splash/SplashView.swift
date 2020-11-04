@@ -13,6 +13,8 @@ struct SplashView: View {
   var body: some View {
     VStack {
       Image(uiImage: image)
+        .resizable()
+        .frame(width: 200, height: 200, alignment: .center)
       Text("Hello, World!")
     }
   }
