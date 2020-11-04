@@ -15,6 +15,8 @@
 		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
 		F4A65CC42551ABB0003F27BE /* CommonUIComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */; };
 		F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CCC2551AC34003F27BE /* SelectableButton.swift */; };
+		F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CE62552BC17003F27BE /* SceneDelegate.swift */; };
+		F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEA2552BCCF003F27BE /* SplashView.swift */; };
 		F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94891254CAC830084E557 /* SplashComposer.swift */; };
 		F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashPresenter.swift */; };
 		F4B9489D254DD8770084E557 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */; };
@@ -48,6 +50,8 @@
 		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIComponentsTest.swift; sourceTree = "<group>"; };
 		F4A65CCC2551AC34003F27BE /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
+		F4A65CE62552BC17003F27BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F4A65CEA2552BCCF003F27BE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F4B94891254CAC830084E557 /* SplashComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComposer.swift; sourceTree = "<group>"; };
 		F4B94895254CAFE20084E557 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CEEEF6253829B900A37ECB /* AppDelegate.swift */,
+				F4A65CE62552BC17003F27BE /* SceneDelegate.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				F484D0502539F7F8007B048D /* SplashVC.swift */,
 				F4B94895254CAFE20084E557 /* SplashPresenter.swift */,
 				F4B94891254CAC830084E557 /* SplashComposer.swift */,
+				F4A65CEA2552BCCF003F27BE /* SplashView.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -347,10 +353,12 @@
 				F4B948AA254DDE6C0084E557 /* MainMenuPresenter.swift in Sources */,
 				F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */,
 				F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */,
+				F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */,
 				F4B948A4254DDE580084E557 /* MainMenuVC.swift in Sources */,
 				F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */,
 				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 				F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */,
+				F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
 				INFOPLIST_FILE = "BluetoothConnectTest/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +538,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
 				INFOPLIST_FILE = "BluetoothConnectTest/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

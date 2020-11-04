@@ -29,10 +29,10 @@ extension SplashPresenter {
 }
 
 final class SplashPresenter {
-  weak var view: SplashViewInput!
+  let view: SplashViewInput
   
   init(view: SplashViewInput) {
     self.view = view
-    self.view.loadController?.action = loadRequiredData(completion:)
+    //self.view.loadController?.action = loadRequiredData(completion:)
   }
 }

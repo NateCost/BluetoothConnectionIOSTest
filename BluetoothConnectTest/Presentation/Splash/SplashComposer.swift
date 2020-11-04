@@ -6,10 +6,10 @@
 import Foundation
 
 final class SplashComposer {
-  let viewController: SplashVC
+  let viewController: SplashView
   
   class func compose() -> SplashComposer {
-    let controller = SplashVC(colorPalette: RegularIOSPalette())
+    var controller = SplashView()
     let presenter = SplashPresenter(
       view: controller
     )
@@ -17,12 +17,12 @@ final class SplashComposer {
     return SplashComposer(viewController: controller)
   }
   
-  private init(viewController: SplashVC) {
+  private init(viewController: SplashView) {
     self.viewController = viewController
   }
 }
 
-protocol SplashViewInput: class {
+protocol SplashViewInput {
   var loadController: ActivatableItem? { get set }
 }
 
