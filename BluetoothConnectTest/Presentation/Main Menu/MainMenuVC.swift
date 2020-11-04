@@ -3,6 +3,7 @@
 //  Copyright © 2020 Nirma Studio. All rights reserved.
 //
 
+import SwiftUI
 import UIKit
 
 final class MainMenuVC<Palette: ColorPalette>: UIViewController {
@@ -30,6 +31,7 @@ final class MainMenuVC<Palette: ColorPalette>: UIViewController {
   
   override func loadView() {
     super.loadView()
+    layoutButtons()
   }
   
   override func viewDidLoad() {
@@ -41,4 +43,29 @@ final class MainMenuVC<Palette: ColorPalette>: UIViewController {
 // MARK: - MainMenuViewInput
 extension MainMenuVC: MainMenuViewInput {}
 // MARK: - Layout
-private extension MainMenuVC {}
+private extension MainMenuVC {
+  func layoutButtons() {
+    let buttons = [startButton, settingsButton, aboutButton]
+    
+    let stackView = UIStackView()
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(stackView)
+    stackView.axis = .vertical
+    stackView.spacing = 20.0
+    stackView.distribution = .fillEqually
+    stackView.alignment = .center
+    stackView.backgroundColor = colorPalette.secondaryColor
+    
+    NSLayoutConstraint.activate([
+      stackView.widthAnchor.constraint(equalToConstant: 200),
+      stackView.heightAnchor.constraint(equalToConstant: CGFloat(buttons.count * 120)),
+      stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+    ])
+    
+    buttons.forEach {
+      stackView.addArrangedSubview($0)
+      $0.sizeToFit()
+    }
+  }
+}
