@@ -4,21 +4,20 @@
 //
 
 import Foundation
+import UIKit
 
 final class SplashComposer {
-  let viewController: SplashView
+  let view: SplashView
   
   class func compose() -> SplashComposer {
-    var controller = SplashView()
-    let presenter = SplashPresenter(
-      view: controller
-    )
+    var controller = SplashView(image: UIImage(named: "logo") ?? UIImage())
+    let presenter = SplashPresenter(view: controller)
     controller.output = presenter
-    return SplashComposer(viewController: controller)
+    return SplashComposer(view: controller)
   }
   
-  private init(viewController: SplashView) {
-    self.viewController = viewController
+  private init(view: SplashView) {
+    self.view = view
   }
 }
 

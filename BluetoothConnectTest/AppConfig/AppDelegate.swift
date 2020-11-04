@@ -7,24 +7,6 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
-//  var window: UIWindow?
-//
-//  func application(
-//    _ application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-//  ) -> Bool {
-//    window = UIWindow(frame: UIScreen.main.bounds)
-//
-//    if let window = window {
-//      window.rootViewController = SplashComposer.compose().viewController
-//      window.makeKeyAndVisible()
-//      window.backgroundColor = .white
-//    }
-//
-//    return true
-//  }
-//
-
   func application(
     _ application: UIApplication,
     configurationForConnecting connectingSceneSession: UISceneSession,

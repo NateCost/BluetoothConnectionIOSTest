@@ -64,8 +64,8 @@ private extension MainMenuVC {
     ])
     
     buttons.forEach {
+      $0.translatesAutoresizingMaskIntoConstraints = false
       stackView.addArrangedSubview($0)
-      $0.sizeToFit()
     }
   }
 }
