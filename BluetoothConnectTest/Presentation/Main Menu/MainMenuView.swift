@@ -11,29 +11,40 @@ struct MainMenuView: View {
   
   var body: some View {
     VStack(alignment: .leading) {
-      HStack(spacing: 10) {
-        Button(action: {}) {
-          Text("Button")
-        }
-        Button(action: {}) {
-          Text("WOW")
-        }
+      HStack {
+        HStack(spacing: 10) {
+          Button(action: {}) {
+            Text("Button")
+          }
+          Button(action: {}) {
+            Text("WOW")
+          }
+        }.padding(.leading)
+        
         Spacer()
+        
+        HStack(spacing: 10) {
+          Button(action: {}) {
+            Text("Button")
+          }
+          Button(action: {}) {
+            Text("WOW")
+          }
+        }.padding(.trailing)
       }
-      .padding(.leading)
       .padding(.top, 60)
+      
       Spacer()
+      
       HStack {
         Spacer()
         VStack(alignment: .center, spacing: 20) {
-          MenuButton(action: start, title: "PLAY")
-          MenuButton(action: start, title: "SETTINGS")
-          MenuButton(action: start, title: "ABOUT")
+          MenuButton(action: start, title: "CONTINUE")
+          MenuButton(action: start, title: "NEW GAME")
         }
-        .frame(width: 200, height: UIScreen.main.bounds.height * 0.3, alignment: .center)
+        .frame(width: 200, height: UIScreen.main.bounds.height * 0.2, alignment: .center)
         Spacer()
-      }
-      Spacer()
+      }.padding(.bottom, UIScreen.main.bounds.height * 0.1)
     }
   }
 }
