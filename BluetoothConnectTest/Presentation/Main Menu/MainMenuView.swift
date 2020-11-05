@@ -10,10 +10,30 @@ struct MainMenuView: View {
   let start: Handler
   
   var body: some View {
-    VStack(spacing: 20) {
-      MenuButton(action: start, title: "PLAY")
-      MenuButton(action: start, title: "SETTINGS")
-      MenuButton(action: start, title: "ABOUT")
+    VStack(alignment: .leading) {
+      HStack(spacing: 10) {
+        Button(action: {}) {
+          Text("Button")
+        }
+        Button(action: {}) {
+          Text("WOW")
+        }
+        Spacer()
+      }
+      .padding(.leading)
+      .padding(.top, 60)
+      Spacer()
+      HStack {
+        Spacer()
+        VStack(alignment: .center, spacing: 20) {
+          MenuButton(action: start, title: "PLAY")
+          MenuButton(action: start, title: "SETTINGS")
+          MenuButton(action: start, title: "ABOUT")
+        }
+        .frame(width: 200, height: UIScreen.main.bounds.height * 0.3, alignment: .center)
+        Spacer()
+      }
+      Spacer()
     }
   }
 }
@@ -21,22 +41,5 @@ struct MainMenuView: View {
 struct MainMenuView_Previews: PreviewProvider {
   static var previews: some View {
     MainMenuView(colorPalette: RegularIOSPalette(), start: {})
-  }
-}
-
-struct MenuButton: View {
-  var action: Handler
-  var title: String
-  
-  var body: some View {
-    Button(action: action) {
-      Text(title)
-        .foregroundColor(.white)
-        .fontWeight(.medium)
-        .font(.title)
-    }
-    .frame(width: 200, height: 60, alignment: .center)
-    .background(Color.black)
-    .cornerRadius(10.0)
   }
 }
