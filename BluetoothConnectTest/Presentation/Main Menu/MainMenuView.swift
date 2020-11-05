@@ -10,10 +10,10 @@ struct MainMenuView: View {
   let start: Handler
   
   var body: some View {
-    VStack {
-      Button("Play", action: start)
-      Button("Settings", action: start)
-      Button("About", action: start)
+    VStack(spacing: 20) {
+      MenuButton(action: start, title: "PLAY")
+      MenuButton(action: start, title: "SETTINGS")
+      MenuButton(action: start, title: "ABOUT")
     }
   }
 }
@@ -21,5 +21,22 @@ struct MainMenuView: View {
 struct MainMenuView_Previews: PreviewProvider {
   static var previews: some View {
     MainMenuView(colorPalette: RegularIOSPalette(), start: {})
+  }
+}
+
+struct MenuButton: View {
+  var action: Handler
+  var title: String
+  
+  var body: some View {
+    Button(action: action) {
+      Text(title)
+        .foregroundColor(.white)
+        .fontWeight(.medium)
+        .font(.title)
+    }
+    .frame(width: 200, height: 60, alignment: .center)
+    .background(Color.black)
+    .cornerRadius(10.0)
   }
 }

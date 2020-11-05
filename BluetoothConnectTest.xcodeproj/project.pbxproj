@@ -13,6 +13,7 @@
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
 		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
+		F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490CBA2255345A7002821EB /* RingSpinner.swift */; };
 		F4A65CC42551ABB0003F27BE /* CommonUIComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */; };
 		F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CCC2551AC34003F27BE /* SelectableButton.swift */; };
 		F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CE62552BC17003F27BE /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		F490CBA2255345A7002821EB /* RingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSpinner.swift; sourceTree = "<group>"; };
 		F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIComponentsTest.swift; sourceTree = "<group>"; };
 		F4A65CCC2551AC34003F27BE /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		F4A65CE62552BC17003F27BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				F4F73A65253C384E00CB618A /* SpinnerView.swift */,
 				F4A65CCC2551AC34003F27BE /* SelectableButton.swift */,
+				F490CBA2255345A7002821EB /* RingSpinner.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */,
 				F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */,
 				F4B948A4254DDE580084E557 /* MainMenuVC.swift in Sources */,
+				F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */,
 				F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */,
 				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 				F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */,
