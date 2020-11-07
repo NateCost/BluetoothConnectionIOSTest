@@ -10,6 +10,8 @@ struct SplashView: View {
   var output: SplashViewOutput?
   let image: UIImage
   
+  @State private var showSpinner = false
+  
   var body: some View {
     VStack {
       VStack {
@@ -23,9 +25,11 @@ struct SplashView: View {
       
       Spacer()
       
-      RingSpinner()
-        .frame(width: 40, height: 40)
-        .padding(.bottom, 100)
+      if showSpinner {
+        RingSpinner()
+          .frame(width: 40, height: 40)
+          .padding(.bottom, 100)
+      }
     }
   }
 }
