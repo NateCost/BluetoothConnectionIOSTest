@@ -10,7 +10,18 @@ struct SplashView: View {
   var output: SplashViewOutput?
   let image: UIImage
   
-  @State private var showSpinner = false
+  var ringSpinner: RingSpinner
+  
+  init(image: UIImage) {
+    self.image = image
+    ringSpinner = RingSpinner()
+    loadController = ActivatableItemControl(itemStateUpdateHandler: ringSpinner.setState(_:))
+    loadController?.action = { completion in
+      print("action Triggered")
+      completion?()
+    }
+    ringSpinner.tapAction = loadController?.activate
+  }
   
   var body: some View {
     VStack {
@@ -25,11 +36,12 @@ struct SplashView: View {
       
       Spacer()
       
-      if showSpinner {
-        RingSpinner()
-          .frame(width: 40, height: 40)
-          .padding(.bottom, 100)
-      }
+      ringSpinner
+        .frame(width: 40, height: 40)
+        .padding(.bottom, 100)
+        .onAppear {
+          loadController?.activate()
+        }
     }
   }
 }
