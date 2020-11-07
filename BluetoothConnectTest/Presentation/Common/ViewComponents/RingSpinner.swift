@@ -14,8 +14,8 @@ protocol Runnable {
   var state: RunnableState { get set }
 }
 
-struct RingSpinner: View {
-  @State var animating: Bool = false
+struct RingSpinner: View, Runnable {
+  @State var state: RunnableState = .stopped
   
   private var spinnerAnimation: Animation {
     Animation.linear(duration: 0.5).repeatForever(autoreverses: false)
@@ -26,8 +26,7 @@ struct RingSpinner: View {
   }
   
   var body: some View {
-    RingSpinnerShape()
-      .animation(animating ? spinnerAnimation : noAnimation)
+    RingSpinnerShape(state: $state)
   }
 }
 
@@ -36,12 +35,23 @@ struct RingSpinnerShape: Shape {
     static let totalDegree = 360.0
   }
   
+  @Binding var state: RunnableState {
+    didSet { handleState(state) }
+  }
+  
   var fillPoint: Double = 1.0
   var fillDelay: Double = 0.5
   
   var animatableData: Double {
     get { fillPoint }
     set { fillPoint = newValue }
+  }
+  
+  private func handleState(_ state: RunnableState) {
+    switch state {
+      case .running: ()
+      case .stopped: ()
+    }
   }
   
   func path(in rect: CGRect) -> Path {
