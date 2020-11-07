@@ -16,18 +16,15 @@ public protocol ActivatableItem {
   var state: ActivationState { get }
 }
 
-public class ActivatableItemControl<
-  Item: Selectable
->: ActivatableItem where Item.State == ActivationState {
-  private weak var item: Item?
+public class ActivatableItemControl {
+  public var itemStateUpdateHandler: ((_ state: ActivationState) -> Void)?
   public var action: ((_ completion: Handler?) -> Void)?
   public var state: ActivationState = .inactive {
-    didSet { item?.setState(state) }
+    didSet { itemStateUpdateHandler?(state) }
   }
   
-  public init(item: Item) {
-    self.item = item
-    item.tapAction = activate
+  public init(itemStateUpdateHandler: ((_ state: ActivationState) -> Void)? = nil) {
+    self.itemStateUpdateHandler = itemStateUpdateHandler
   }
   
   public func activate() {
