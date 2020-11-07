@@ -20,9 +20,9 @@ final class MainMenuVC<Palette: ColorPalette>: UIViewController {
   init(colorPalette: Palette) {
     self.colorPalette = colorPalette
     super.init(nibName: nil, bundle: nil)
-    startController = ActivatableItemControl(item: startButton)
-    settingsController = ActivatableItemControl(item: settingsButton)
-    aboutController = ActivatableItemControl(item: aboutButton)
+    startController = ActivatableItemControl(itemStateUpdateHandler: startButton.setState(_:))
+    settingsController = ActivatableItemControl(itemStateUpdateHandler: settingsButton.setState(_:))
+    aboutController = ActivatableItemControl(itemStateUpdateHandler: aboutButton.setState(_:))
   }
   
   required init?(coder: NSCoder) {

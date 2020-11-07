@@ -25,7 +25,7 @@ final class SplashVC: UIViewController {
   init(colorPalette: ColorPalette) {
     self.colorPalette = colorPalette
     super.init(nibName: nil, bundle: nil)
-    loadController = ActivatableItemControl(item: spinnerView)
+    loadController = ActivatableItemControl(itemStateUpdateHandler: spinnerView.setState(_:))
   }
   
   required init?(coder: NSCoder) {

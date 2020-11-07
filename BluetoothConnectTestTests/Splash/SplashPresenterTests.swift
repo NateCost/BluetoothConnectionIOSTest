@@ -17,7 +17,7 @@ class SplashPresenterTest: XCTestCase {
   
   func makeSUT(view: SplashViewInput? = SplashViewSpy()) -> SplashPresenter {
     self.view = view
-    self.view!.loadController = ActivatableItemControl(item: ActivatableItemSpy())
+    self.view!.loadController = ActivatableItemControl(itemStateUpdateHandler: ActivatableItemSpy().setState(_:))
     let sut = SplashPresenter(view: self.view!)
     
     return sut

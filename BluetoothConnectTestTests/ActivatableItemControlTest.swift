@@ -77,7 +77,8 @@ class MenuItemControlTest: XCTestCase {
     action: ((_ completion: Handler?) -> Void)? = nil,
     selectable: SelectableSpy = SelectableSpy()
   ) -> ActivatableItem {
-    let sut = ActivatableItemControl(item: selectable)
+    let sut = ActivatableItemControl(itemStateUpdateHandler: selectable.setState(_:))
+    selectable.tapAction = sut.activate
     sut.action = action
     return sut
   }

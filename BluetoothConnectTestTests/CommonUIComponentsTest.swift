@@ -21,7 +21,7 @@ extension CommonUIComponentsTest {
   
   func testSelectionButtonActivatesOnTap() {
     let button = SelectableButton()
-    let sut = ActivatableItemControl(item: button)
+    let sut = ActivatableItemControl(itemStateUpdateHandler: button.setState(_:))
     sut.action = { _ in }
    
     button.sendActions(for: .touchUpInside)
