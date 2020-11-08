@@ -8,24 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */; };
-		F41C2F152544150E00D497D5 /* ActivatableItemControlTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */; };
 		F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F1C2544160700D497D5 /* Typealiases.swift */; };
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
 		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
 		F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490CBA2255345A7002821EB /* RingSpinner.swift */; };
 		F490CBA72553D51D002821EB /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490CBA62553D51D002821EB /* MenuButton.swift */; };
-		F4A65CC42551ABB0003F27BE /* CommonUIComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */; };
 		F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CCC2551AC34003F27BE /* SelectableButton.swift */; };
 		F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CE62552BC17003F27BE /* SceneDelegate.swift */; };
 		F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEA2552BCCF003F27BE /* SplashView.swift */; };
 		F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */; };
 		F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94891254CAC830084E557 /* SplashComposer.swift */; };
 		F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashPresenter.swift */; };
-		F4B9489D254DD8770084E557 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */; };
 		F4B948A4254DDE580084E557 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948A3254DDE580084E557 /* MainMenuVC.swift */; };
 		F4B948AA254DDE6C0084E557 /* MainMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948A9254DDE6C0084E557 /* MainMenuPresenter.swift */; };
 		F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948AD254DDE780084E557 /* MainMenuComposer.swift */; };
+		F4CE6E592557EA53001E8917 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E552557EA53001E8917 /* SplashPresenterTests.swift */; };
+		F4CE6E5A2557EA53001E8917 /* ActivatableItemControlTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E562557EA53001E8917 /* ActivatableItemControlTest.swift */; };
+		F4CE6E5B2557EA53001E8917 /* CommonUIComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E572557EA53001E8917 /* CommonUIComponentsTest.swift */; };
+		F4CE6E5C2557EA53001E8917 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4CE6E582557EA53001E8917 /* Info.plist */; };
 		F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEEEF6253829B900A37ECB /* AppDelegate.swift */; };
 		F4CEEF00253829BB00A37ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEEFF253829BB00A37ECB /* Assets.xcassets */; };
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
@@ -46,31 +47,31 @@
 
 /* Begin PBXFileReference section */
 		F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatebleItemControl.swift; sourceTree = "<group>"; };
-		F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatableItemControlTest.swift; sourceTree = "<group>"; };
 		F41C2F1C2544160700D497D5 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F490CBA2255345A7002821EB /* RingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSpinner.swift; sourceTree = "<group>"; };
 		F490CBA62553D51D002821EB /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
-		F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIComponentsTest.swift; sourceTree = "<group>"; };
 		F4A65CCC2551AC34003F27BE /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		F4A65CE62552BC17003F27BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F4A65CEA2552BCCF003F27BE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		F4B94891254CAC830084E557 /* SplashComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComposer.swift; sourceTree = "<group>"; };
 		F4B94895254CAFE20084E557 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
-		F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
 		F4B948A3254DDE580084E557 /* MainMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		F4B948A9254DDE6C0084E557 /* MainMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenter.swift; sourceTree = "<group>"; };
 		F4B948AD254DDE780084E557 /* MainMenuComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuComposer.swift; sourceTree = "<group>"; };
-		F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothConnectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CE6E552557EA53001E8917 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
+		F4CE6E562557EA53001E8917 /* ActivatableItemControlTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivatableItemControlTest.swift; sourceTree = "<group>"; };
+		F4CE6E572557EA53001E8917 /* CommonUIComponentsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUIComponentsTest.swift; sourceTree = "<group>"; };
+		F4CE6E582557EA53001E8917 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CEEEF3253829B900A37ECB /* Konevod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konevod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEEEF6253829B900A37ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CEEEFF253829BB00A37ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4CEEF02253829BB00A37ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4CEEF04253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4CEEF09253829BB00A37ECB /* BluetoothConnectTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothConnectTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4CEEF0F253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CEEF09253829BB00A37ECB /* KonevodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonevodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DA4BC3254E958C00C3F78F /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		F4F73A65253C384E00CB618A /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,14 +156,6 @@
 			path = ViewComponents;
 			sourceTree = "<group>";
 		};
-		F4B9489B254DD8570084E557 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				F4B9489C254DD8770084E557 /* SplashPresenterTests.swift */,
-			);
-			path = Splash;
-			sourceTree = "<group>";
-		};
 		F4B948A2254DDDF60084E557 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,11 +167,30 @@
 			path = "Main Menu";
 			sourceTree = "<group>";
 		};
+		F4CE6E532557EA53001E8917 /* KonevodTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE6E542557EA53001E8917 /* Splash */,
+				F4CE6E562557EA53001E8917 /* ActivatableItemControlTest.swift */,
+				F4CE6E572557EA53001E8917 /* CommonUIComponentsTest.swift */,
+				F4CE6E582557EA53001E8917 /* Info.plist */,
+			);
+			path = KonevodTests;
+			sourceTree = "<group>";
+		};
+		F4CE6E542557EA53001E8917 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE6E552557EA53001E8917 /* SplashPresenterTests.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		F4CEEEEA253829B900A37ECB = {
 			isa = PBXGroup;
 			children = (
-				F4CEEEF5253829B900A37ECB /* BluetoothConnectTest */,
-				F4CEEF0C253829BB00A37ECB /* BluetoothConnectTestTests */,
+				F4CE6E532557EA53001E8917 /* KonevodTests */,
+				F4CEEEF5253829B900A37ECB /* Konevod */,
 				F4CEEEF4253829B900A37ECB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,13 +198,13 @@
 		F4CEEEF4253829B900A37ECB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */,
-				F4CEEF09253829BB00A37ECB /* BluetoothConnectTestTests.xctest */,
+				F4CEEEF3253829B900A37ECB /* Konevod.app */,
+				F4CEEF09253829BB00A37ECB /* KonevodTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4CEEEF5253829B900A37ECB /* BluetoothConnectTest */ = {
+		F4CEEEF5253829B900A37ECB /* Konevod */ = {
 			isa = PBXGroup;
 			children = (
 				F484D04B2539F32C007B048D /* AppConfig */,
@@ -200,18 +212,7 @@
 				F484D04D2539F459007B048D /* Core */,
 				F484D0342539EDD7007B048D /* Supporting FIles */,
 			);
-			path = BluetoothConnectTest;
-			sourceTree = "<group>";
-		};
-		F4CEEF0C253829BB00A37ECB /* BluetoothConnectTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				F4B9489B254DD8570084E557 /* Splash */,
-				F41C2F142544150E00D497D5 /* ActivatableItemControlTest.swift */,
-				F4A65CC32551ABB0003F27BE /* CommonUIComponentsTest.swift */,
-				F4CEEF0F253829BB00A37ECB /* Info.plist */,
-			);
-			path = BluetoothConnectTestTests;
+			path = Konevod;
 			sourceTree = "<group>";
 		};
 		F4F73A64253C383F00CB618A /* Common */ = {
@@ -227,9 +228,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4CEEEF2253829B900A37ECB /* BluetoothConnectTest */ = {
+		F4CEEEF2253829B900A37ECB /* Konevod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4CEEF1D253829BB00A37ECB /* Build configuration list for PBXNativeTarget "BluetoothConnectTest" */;
+			buildConfigurationList = F4CEEF1D253829BB00A37ECB /* Build configuration list for PBXNativeTarget "Konevod" */;
 			buildPhases = (
 				F4CEEEEF253829B900A37ECB /* Sources */,
 				F4CEEEF0253829B900A37ECB /* Frameworks */,
@@ -240,17 +241,17 @@
 			);
 			dependencies = (
 			);
-			name = BluetoothConnectTest;
+			name = Konevod;
 			packageProductDependencies = (
 				F4DC105C2538400D0074B211 /* SwiftFormat */,
 			);
 			productName = BluetoothConnectTest;
-			productReference = F4CEEEF3253829B900A37ECB /* BluetoothConnectTest.app */;
+			productReference = F4CEEEF3253829B900A37ECB /* Konevod.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F4CEEF08253829BB00A37ECB /* BluetoothConnectTestTests */ = {
+		F4CEEF08253829BB00A37ECB /* KonevodTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4CEEF20253829BB00A37ECB /* Build configuration list for PBXNativeTarget "BluetoothConnectTestTests" */;
+			buildConfigurationList = F4CEEF20253829BB00A37ECB /* Build configuration list for PBXNativeTarget "KonevodTests" */;
 			buildPhases = (
 				F4CEEF05253829BB00A37ECB /* Sources */,
 				F4CEEF06253829BB00A37ECB /* Frameworks */,
@@ -261,9 +262,9 @@
 			dependencies = (
 				F4CEEF0B253829BB00A37ECB /* PBXTargetDependency */,
 			);
-			name = BluetoothConnectTestTests;
+			name = KonevodTests;
 			productName = BluetoothConnectTestTests;
-			productReference = F4CEEF09253829BB00A37ECB /* BluetoothConnectTestTests.xctest */;
+			productReference = F4CEEF09253829BB00A37ECB /* KonevodTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +286,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F4CEEEEE253829B900A37ECB /* Build configuration list for PBXProject "BluetoothConnectTest" */;
+			buildConfigurationList = F4CEEEEE253829B900A37ECB /* Build configuration list for PBXProject "Konevod" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -301,8 +302,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4CEEEF2253829B900A37ECB /* BluetoothConnectTest */,
-				F4CEEF08253829BB00A37ECB /* BluetoothConnectTestTests */,
+				F4CEEEF2253829B900A37ECB /* Konevod */,
+				F4CEEF08253829BB00A37ECB /* KonevodTests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CE6E5C2557EA53001E8917 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,9 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A65CC42551ABB0003F27BE /* CommonUIComponentsTest.swift in Sources */,
-				F41C2F152544150E00D497D5 /* ActivatableItemControlTest.swift in Sources */,
-				F4B9489D254DD8770084E557 /* SplashPresenterTests.swift in Sources */,
+				F4CE6E5A2557EA53001E8917 /* ActivatableItemControlTest.swift in Sources */,
+				F4CE6E5B2557EA53001E8917 /* CommonUIComponentsTest.swift in Sources */,
+				F4CE6E592557EA53001E8917 /* SplashPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +391,7 @@
 /* Begin PBXTargetDependency section */
 		F4CEEF0B253829BB00A37ECB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F4CEEEF2253829B900A37ECB /* BluetoothConnectTest */;
+			target = F4CEEEF2253829B900A37ECB /* Konevod */;
 			targetProxy = F4CEEF0A253829BB00A37ECB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -527,16 +529,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = "BluetoothConnectTest/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Konevod/Supporting FIles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.BluetoothConnectTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.Konevod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -547,16 +551,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = "BluetoothConnectTest/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Konevod/Supporting FIles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.BluetoothConnectTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.Konevod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -569,18 +575,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = BluetoothConnectTestTests/Info.plist;
+				INFOPLIST_FILE = Konevod/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.BluetoothConnectTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.Konevod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothConnectTest.app/BluetoothConnectTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Konevod.app/Konevod";
 			};
 			name = Debug;
 		};
@@ -591,25 +597,25 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9A52X52G8;
-				INFOPLIST_FILE = BluetoothConnectTestTests/Info.plist;
+				INFOPLIST_FILE = Konevod/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.BluetoothConnectTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nirma.Konevod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothConnectTest.app/BluetoothConnectTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Konevod.app/Konevod";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4CEEEEE253829B900A37ECB /* Build configuration list for PBXProject "BluetoothConnectTest" */ = {
+		F4CEEEEE253829B900A37ECB /* Build configuration list for PBXProject "Konevod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4CEEF1B253829BB00A37ECB /* Debug */,
@@ -618,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4CEEF1D253829BB00A37ECB /* Build configuration list for PBXNativeTarget "BluetoothConnectTest" */ = {
+		F4CEEF1D253829BB00A37ECB /* Build configuration list for PBXNativeTarget "Konevod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4CEEF1E253829BB00A37ECB /* Debug */,
@@ -627,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4CEEF20253829BB00A37ECB /* Build configuration list for PBXNativeTarget "BluetoothConnectTestTests" */ = {
+		F4CEEF20253829BB00A37ECB /* Build configuration list for PBXNativeTarget "KonevodTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4CEEF21253829BB00A37ECB /* Debug */,
