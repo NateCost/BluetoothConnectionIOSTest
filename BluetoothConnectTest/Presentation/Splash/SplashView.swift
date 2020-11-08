@@ -16,10 +16,6 @@ struct SplashView: View {
     self.image = image
     ringSpinner = RingSpinner()
     loadController = ActivatableItemControl(itemStateUpdateHandler: ringSpinner.setState(_:))
-    loadController?.action = { completion in
-      print("action Triggered")
-      completion?()
-    }
     ringSpinner.tapAction = loadController?.activate
   }
   
@@ -39,10 +35,7 @@ struct SplashView: View {
       ringSpinner
         .frame(width: 40, height: 40)
         .padding(.bottom, 100)
-        .onAppear {
-          loadController?.activate()
-        }
-    }
+    }.onAppear { output?.viewDidLoad() }
   }
 }
 // MARK: - SplashViewInput

@@ -15,17 +15,13 @@ protocol Runnable {
 }
 
 struct RingSpinner: View, Selectable {
-  @State private var state: ActivationState = .inactive
-  @State private var fillPoint: Double = 0.0
+  @ObservedObject var state = RingSpinnerShapeState()
+  
   var tapAction: Handler?
   private var _spinner: RingSpinnerShape?
   
-  init() {
-    _spinner = RingSpinnerShape(fillPoint: fillPoint)
-  }
-  
   private var spinnerAnimation: Animation {
-    Animation.linear(duration: 0.5).repeatForever(autoreverses: false)
+    Animation.linear(duration: 0.8).repeatForever(autoreverses: false)
   }
   
   private var noAnimation: Animation {
@@ -33,21 +29,27 @@ struct RingSpinner: View, Selectable {
   }
   
   var body: some View {
-    _spinner
-      .onAppear {
-        withAnimation(spinnerAnimation) {
-          fillPoint = 1.0
-        }
-      }
+    RingSpinnerShape(filledPoint: state.filledPoint)
+      .animation(state.state == .active ? spinnerAnimation : noAnimation)
+      .opacity(state.state == .active ? 1.0 : 0.0)
   }
   
   func setState(_ state: ActivationState) {
+    DispatchQueue.main.async {
+      self.state.update(with: state)
+    }
+  }
+}
+
+class RingSpinnerShapeState: ObservableObject {
+  @Published var filledPoint: Double = 0.0
+  @Published var state: ActivationState = .inactive
+  
+  func update(with state: ActivationState) {
     self.state = state
     switch state {
-      case .active: ()
-        //fillPoint = 1.0
-      case .inactive: ()
-        //fillPoint = 0.0
+      case .active:   filledPoint = 1.0
+      case .inactive: filledPoint = 0.0
     }
   }
 }
@@ -57,22 +59,22 @@ struct RingSpinnerShape: Shape {
     static let totalDegree = 360.0
   }
   
-  @State var fillPoint: Double = 0.0
+  var filledPoint: Double
   var fillDelay: Double = 0.5
   
   var animatableData: Double {
-    get { fillPoint }
-    set { fillPoint = newValue }
+    get { filledPoint }
+    set { filledPoint = newValue }
   }
   
   func path(in rect: CGRect) -> Path {
     var start = 0.0
-    let end = Constants.totalDegree * fillPoint
+    let end = Constants.totalDegree * filledPoint
     
-    if fillPoint > fillDelay {
-      start = (fillPoint - fillDelay) * Constants.totalDegree
+    if filledPoint > fillDelay {
+      start = (filledPoint - fillDelay) * Constants.totalDegree
     } else {
-      start = (1.0 - fillDelay + fillPoint) * Constants.totalDegree
+      start = (1.0 - fillDelay + filledPoint) * Constants.totalDegree
     }
     
     var path = Path()

@@ -14,11 +14,8 @@ extension SplashPresenter: SplashViewOutput {
 // MARK: - SplashPresenter
 extension SplashPresenter {
   func loadRequiredData(completion: Handler?) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
       completion?()
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-        self?.transiteToMainMenu()
-      }
     }
   }
   
@@ -29,10 +26,10 @@ extension SplashPresenter {
 }
 
 final class SplashPresenter {
-  let view: SplashViewInput
+  var view: SplashViewInput
   
   init(view: SplashViewInput) {
     self.view = view
-    //self.view.loadController?.action = loadRequiredData(completion:)
+    self.view.loadController?.action = loadRequiredData(completion:)
   }
 }
