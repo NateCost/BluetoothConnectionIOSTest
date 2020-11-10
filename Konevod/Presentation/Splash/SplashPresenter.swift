@@ -14,15 +14,13 @@ extension SplashPresenter: SplashViewOutput {
 // MARK: - SplashPresenter
 extension SplashPresenter {
   func loadRequiredData(completion: Handler?) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
       completion?()
+      self?.transiteToMainMenu()
     }
   }
   
-  func transiteToMainMenu() {
-    let mainMenuComposer = MainMenuComposer.compose()
-    AppDelegate.shared.changeRootViewControllerTo(mainMenuComposer.viewController)
-  }
+  func transiteToMainMenu() {}
 }
 
 final class SplashPresenter {

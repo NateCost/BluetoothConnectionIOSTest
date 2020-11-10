@@ -8,12 +8,11 @@ import SwiftUI
 struct SplashView: View {
   var loadController: ActivatableItem?
   var output: SplashViewOutput?
-  let image: UIImage
-  
+  let logoImage: UIImage
   var ringSpinner: RingSpinner
   
-  init(image: UIImage) {
-    self.image = image
+  init(logoImage: UIImage) {
+    self.logoImage = logoImage
     ringSpinner = RingSpinner()
     loadController = ActivatableItemControl(itemStateUpdateHandler: ringSpinner.setState(_:))
     ringSpinner.tapAction = loadController?.activate
@@ -22,7 +21,7 @@ struct SplashView: View {
   var body: some View {
     VStack {
       VStack {
-        Image(uiImage: image)
+        Image(uiImage: logoImage)
           .resizable()
           .frame(width: 200, height: 200, alignment: .center)
         Text("KONEVOD")
@@ -44,7 +43,7 @@ extension SplashView: SplashViewInput {}
 struct SplashView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SplashView(image: UIImage(named: "logo")!)
+      SplashView(logoImage: UIImage(named: "logo")!)
     }
   }
 }

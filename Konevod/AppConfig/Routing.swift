@@ -20,7 +20,26 @@ class Router {
     return nil
   }
   
-  static func show<Content: View>(_ content: Content) {
-    window?.rootViewController = UIHostingController(rootView: content)
+  static func show<Content: View>(
+    _ content: Content,
+    animated: Bool = true,
+    completion: Handler? = nil
+  ) {
+    guard let window = window else { completion?(); return }
+    
+    window.rootViewController = UIHostingController(rootView: content)
+
+    if animated {
+      let options: UIView.AnimationOptions = .transitionCrossDissolve
+      let duration: TimeInterval = 0.3
+
+      UIView.transition(
+        with: window,
+        duration: duration,
+        options: options,
+        animations: {},
+        completion: { _ in completion?() }
+      )
+    }
   }
 }

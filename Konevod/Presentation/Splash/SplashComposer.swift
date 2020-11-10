@@ -10,7 +10,7 @@ final class SplashComposer {
   let view: SplashView
   
   class func compose() -> SplashComposer {
-    var controller = SplashView(image: UIImage(named: "logo") ?? UIImage())
+    var controller = SplashView(logoImage: UIImage(named: "logo") ?? UIImage())
     let presenter = SplashPresenter(view: controller)
     controller.output = presenter
     return SplashComposer(view: controller)
