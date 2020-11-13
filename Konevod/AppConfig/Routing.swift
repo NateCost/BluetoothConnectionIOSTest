@@ -1,45 +1,27 @@
 //
-//  Created by Ilya Sakalou on 11/9/20.
+//  Created by Ilya Sakalou on 13.11.20.
 //  Copyright © 2020 Nirma Studio. All rights reserved.
 //
 
-import Foundation
-import UIKit
 import SwiftUI
 
-class Router {
-  class var window: UIWindow? {
-    if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-      if let sceneDelegate = scene.delegate as? SceneDelegate {
-        let window = UIWindow(windowScene: scene)
-        sceneDelegate.window = window
-        window.makeKeyAndVisible()
-        return window
-      }
-    }
-    return nil
-  }
+public enum PresentationView {
+  case mainMenu
   
-  static func show<Content: View>(
-    _ content: Content,
-    animated: Bool = true,
-    completion: Handler? = nil
-  ) {
-    guard let window = window else { completion?(); return }
-    
-    window.rootViewController = UIHostingController(rootView: content)
-
-    if animated {
-      let options: UIView.AnimationOptions = .transitionCrossDissolve
-      let duration: TimeInterval = 0.3
-
-      UIView.transition(
-        with: window,
-        duration: duration,
-        options: options,
-        animations: {},
-        completion: { _ in completion?() }
-      )
+//  case noInternetConnection
+//  case incorrectLogin
+//  case invalidAge
+//  case invalidHeight
+//  case invalidWeight
+  
+  func view() -> some View {
+    switch self {
+      case .mainMenu: return AnyView(MainMenuView(start: {}))
+//      case .noInternetConnection: return AnyView(ModalView(style: .noInternetConnection))
+//      case .incorrectLogin: return AnyView(ModalView(style: .incorrectLogin))
+//      case .invalidAge: return AnyView(ModalView(style: .invalidAge))
+//      case .invalidHeight: return AnyView(ModalView(style: .invalidHeight))
+//      case .invalidWeight: return AnyView(ModalView(style: .invalidWeight))
     }
   }
 }

@@ -19,6 +19,12 @@ struct SplashView: View {
   }
   
   var body: some View {
+    NavigationLink(
+      destination: Text("Destination"),
+      isActive: .constant(true),
+      label: {
+        Text("Navigate")
+      })
     VStack {
       VStack {
         Image(uiImage: logoImage)

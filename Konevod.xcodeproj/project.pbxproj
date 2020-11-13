@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F40B767D2559B29800A98B92 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B767C2559B29800A98B92 /* Routing.swift */; };
 		F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */; };
 		F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F1C2544160700D497D5 /* Typealiases.swift */; };
+		F46E7F48255F17C300B3FED4 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46E7F47255F17C300B3FED4 /* Routing.swift */; };
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
 		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
@@ -47,9 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F40B767C2559B29800A98B92 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatebleItemControl.swift; sourceTree = "<group>"; };
 		F41C2F1C2544160700D497D5 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		F46E7F47255F17C300B3FED4 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			children = (
 				F4CEEEF6253829B900A37ECB /* AppDelegate.swift */,
 				F4A65CE62552BC17003F27BE /* SceneDelegate.swift */,
-				F40B767C2559B29800A98B92 /* Routing.swift */,
+				F46E7F47255F17C300B3FED4 /* Routing.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				F4B948A4254DDE580084E557 /* MainMenuVC.swift in Sources */,
 				F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */,
 				F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */,
-				F40B767D2559B29800A98B92 /* Routing.swift in Sources */,
+				F46E7F48255F17C300B3FED4 /* Routing.swift in Sources */,
 				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 				F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */,
 				F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */,
