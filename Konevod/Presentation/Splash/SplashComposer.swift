@@ -10,8 +10,8 @@ final class SplashComposer {
   
   class func compose() -> SplashComposer {
     let store = SplashStore()
-    let controller = SplashView<SplashStore>(logoImage: UIImage(named: "logo") ?? UIImage(), store: store)
-    return SplashComposer(view: controller)
+    let view = SplashView(logoImage: UIImage(named: "logo") ?? UIImage(), store: store)
+    return SplashComposer(view: view)
   }
   
   private init(view: SplashView<SplashStore>) {
@@ -24,6 +24,6 @@ protocol SplashViewInput {}
 protocol SplashViewOutput: ObservableObject {
   var destinationView: AnyView? { get }
   var activateNavigationLink: Bool { get set }
-  func viewDidLoad()
-  func bindLoadController(_ loadController: ActivatableItemControl)
+  var loadController: ActivatableItemControl { get }
+  func viewDidAppear()
 }

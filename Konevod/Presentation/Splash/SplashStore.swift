@@ -7,19 +7,14 @@ import SwiftUI
 
 // MARK: - SplashViewOutput
 extension SplashStore: SplashViewOutput {
-  func viewDidLoad() {
+  func viewDidAppear() {
     loadController.activate()
-  }
-  
-  func bindLoadController(_ loadController: ActivatableItemControl) {
-    self.loadController = loadController
-    self.loadController.action = loadRequiredData(completion:)
   }
 }
 // MARK: - SplashStore
 extension SplashStore {
   func loadRequiredData(completion: Handler?) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
       completion?()
       self?.transiteToMainMenu()
     }
@@ -27,7 +22,7 @@ extension SplashStore {
   
   func transiteToMainMenu() {
     destinationView = AnyView(MainMenuView(start: {}))
-    activateNavigationLink = true
+    activateNavigationLink.toggle()
   }
 }
 
@@ -36,4 +31,8 @@ class SplashStore: ObservableObject {
   @Published var activateNavigationLink: Bool = false
   
   var loadController: ActivatableItemControl = ActivatableItemControl()
+  
+  init() {
+    loadController.action = loadRequiredData(completion:)
+  }
 }

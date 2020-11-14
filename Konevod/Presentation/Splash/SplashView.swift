@@ -12,12 +12,11 @@ struct SplashView<Store>: View where Store: SplashViewOutput {
   @ObservedObject var store: Store
   @State var navigate = false
   
-  init(logoImage: UIImage, store: Store) {
+  internal init(logoImage: UIImage, store: Store) {
     self.logoImage = logoImage
     self.store = store
-    let loadControl = ActivatableItemControl(itemStateUpdateHandler: ringSpinner.setState(_:))
-    ringSpinner.tapAction = loadControl.activate
-    self.store.bindLoadController(loadControl)
+    store.loadController.itemStateUpdateHandler = ringSpinner.setState(_:)
+    ringSpinner.tapAction = store.loadController.activate
   }
   
   var body: some View {
