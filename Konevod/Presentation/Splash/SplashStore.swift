@@ -22,13 +22,14 @@ extension SplashStore {
   
   func transiteToMainMenu() {
     destinationView = AnyView(MainMenuView(start: {}))
-    activateNavigationLink.toggle()
   }
 }
 
-class SplashStore: ObservableObject {
-  @Published var destinationView: AnyView?
-  @Published var activateNavigationLink: Bool = false
+final class SplashStore: ObservableObject {
+  @Published var activateNavigationLink = false
+  @Published var destinationView: AnyView? {
+    didSet { activateNavigationLink = destinationView != nil }
+  }
   
   var loadController: ActivatableItemControl = ActivatableItemControl()
   

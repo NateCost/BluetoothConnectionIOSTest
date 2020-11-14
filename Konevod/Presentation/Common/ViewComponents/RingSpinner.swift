@@ -15,8 +15,7 @@ protocol Runnable {
 }
 
 struct RingSpinner: View, Selectable {
-  #warning("this is so bad. change to @StateObject in ios 14")
-  @ObservedObject var state = RingSpinnerShapeState()
+  @ObservedObject var state: RingSpinnerShapeState
   
   var tapAction: Handler?
   private var _spinner: RingSpinnerShape?
@@ -24,9 +23,12 @@ struct RingSpinner: View, Selectable {
   private var spinnerAnimation: Animation {
     Animation.linear(duration: 0.8).repeatForever(autoreverses: false)
   }
-  
   private var noAnimation: Animation {
     Animation.linear(duration: 0.2).repeatCount(0)
+  }
+  
+  internal init(state: RingSpinnerShapeState = RingSpinnerShapeState()) {
+    self.state = state
   }
   
   var body: some View {
@@ -95,7 +97,7 @@ struct RingSpinnerShape: Shape {
 
 struct RingSpinner_Previews: PreviewProvider {
   static var previews: some View {
-    RingSpinner()
+    RingSpinner(state: RingSpinnerShapeState())
       .frame(width: 40, height: 40, alignment: .center)
       .previewLayout(.sizeThatFits)
   }

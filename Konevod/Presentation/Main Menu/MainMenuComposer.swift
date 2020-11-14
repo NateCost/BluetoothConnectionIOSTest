@@ -6,24 +6,21 @@
 import Foundation
 
 final class MainMenuComposer {
-  let viewController: MainMenuVC<IOSPalette>
+  let view: MainMenuView
   
   class func compose() -> MainMenuComposer {
-    let controller = MainMenuVC<IOSPalette>(colorPalette: .default)
-    let presenter = MainMenuPresenter(
-      view: controller
-    )
-    controller.output = presenter
-    return MainMenuComposer(viewController: controller)
+    let view = MainMenuView(colorPalette: RegularIOSPalette(), start: {})
+    let store = MainMenuStore()
+    return MainMenuComposer(view: view)
   }
   
-  private init(viewController: MainMenuVC<IOSPalette>) {
-    self.viewController = viewController
+  private init(view: MainMenuView) {
+    self.view = view
   }
 }
 
 protocol MainMenuViewInput: class {}
 
 protocol MainMenuViewOutput: class {
-  func viewDidLoad()
+  func viewDidAppear()
 }

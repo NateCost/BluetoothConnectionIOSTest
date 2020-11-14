@@ -7,10 +7,9 @@ import SwiftUI
 
 struct SplashView<Store>: View where Store: SplashViewOutput {
   let logoImage: UIImage
-  var ringSpinner: RingSpinner = RingSpinner()
+  var ringSpinner = RingSpinner()
   
   @ObservedObject var store: Store
-  @State var navigate = false
   
   internal init(logoImage: UIImage, store: Store) {
     self.logoImage = logoImage
@@ -45,7 +44,7 @@ struct SplashView<Store>: View where Store: SplashViewOutput {
         ) { EmptyView() }
       }
     }
-    .onAppear { store.viewDidLoad() }
+    .onAppear(perform: store.viewDidAppear)
   }
 }
 // MARK: - SplashViewInput
@@ -54,7 +53,7 @@ extension SplashView: SplashViewInput {}
 struct SplashView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SplashView<SplashStore>(logoImage: UIImage(named: "logo")!, store: SplashStore())
+      SplashView(logoImage: UIImage(named: "logo")!, store: SplashStore())
     }
   }
 }
