@@ -22,7 +22,6 @@
 		F4B948AA254DDE6C0084E557 /* MainMenuStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948A9254DDE6C0084E557 /* MainMenuStore.swift */; };
 		F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948AD254DDE780084E557 /* MainMenuComposer.swift */; };
 		F4CE400925601FDD009B9611 /* TextInputErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE400825601FDD009B9611 /* TextInputErrorView.swift */; };
-		F4CE400D2560291F009B9611 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE400C2560291F009B9611 /* TestView.swift */; };
 		F4CE6E592557EA53001E8917 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E552557EA53001E8917 /* SplashPresenterTests.swift */; };
 		F4CE6E5A2557EA53001E8917 /* ActivatableItemControlTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E562557EA53001E8917 /* ActivatableItemControlTest.swift */; };
 		F4CE6E5B2557EA53001E8917 /* CommonUIComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E572557EA53001E8917 /* CommonUIComponentsTest.swift */; };
@@ -60,7 +59,6 @@
 		F4B948A9254DDE6C0084E557 /* MainMenuStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuStore.swift; sourceTree = "<group>"; };
 		F4B948AD254DDE780084E557 /* MainMenuComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuComposer.swift; sourceTree = "<group>"; };
 		F4CE400825601FDD009B9611 /* TextInputErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputErrorView.swift; sourceTree = "<group>"; };
-		F4CE400C2560291F009B9611 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		F4CE6E552557EA53001E8917 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
 		F4CE6E562557EA53001E8917 /* ActivatableItemControlTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivatableItemControlTest.swift; sourceTree = "<group>"; };
 		F4CE6E572557EA53001E8917 /* CommonUIComponentsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUIComponentsTest.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				F490CBA2255345A7002821EB /* RingSpinner.swift */,
 				F490CBA62553D51D002821EB /* MenuButton.swift */,
 				F4CE400825601FDD009B9611 /* TextInputErrorView.swift */,
-				F4CE400C2560291F009B9611 /* TestView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -357,7 +354,6 @@
 				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
 				F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
-				F4CE400D2560291F009B9611 /* TestView.swift in Sources */,
 				F4CE400925601FDD009B9611 /* TextInputErrorView.swift in Sources */,
 				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
 				F4B948AA254DDE6C0084E557 /* MainMenuStore.swift in Sources */,

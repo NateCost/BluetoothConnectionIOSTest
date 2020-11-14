@@ -8,6 +8,7 @@ import SwiftUI
 struct TextInputErrorView: View {
   let title: String
   let subtitle: String
+  @Binding var isPresented: Bool
   
   var body: some View {
     ZStack {
@@ -45,22 +46,27 @@ struct TextInputErrorView: View {
         .background(RoundedRectangle(cornerRadius: 16).fill(Color.white))
       }
     }
+    .onAppear {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        isPresented = false
+      }
+    }
   }
 }
 
 struct TextInputErrorView_Previews: PreviewProvider {
   static var previews: some View {
-    TextInputErrorView(title: "test@example.com", subtitle: "пользователя с таким email не существует")
+    TextInputErrorView(title: "test@example.com", subtitle: "пользователя с таким email не существует", isPresented: .constant(false))
       .frame(width: 340, height: 60, alignment: .center)
       .background(Color.clear)
       .previewLayout(.sizeThatFits)
     
-    TextInputErrorView(title: "test@example.com", subtitle: "пользователя с таким email не существует")
+    TextInputErrorView(title: "test@example.com", subtitle: "пользователя с таким email не существует", isPresented: .constant(false))
       .frame(width: 200, height: 100, alignment: .center)
       .background(Color.gray)
       .previewLayout(.sizeThatFits)
     
-    TextInputErrorView(title: "test@example.com", subtitle: "пользователя с таким email не существует")
+    TextInputErrorView(title: "test@example.com", subtitle: "пользователя с таким email не существует", isPresented: .constant(false))
       .frame(width: 340, height: 60, alignment: .center)
       .background(Color.black)
       .previewLayout(.sizeThatFits)

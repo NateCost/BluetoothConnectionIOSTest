@@ -8,43 +8,60 @@ import SwiftUI
 struct MainMenuView: View {
   var colorPalette = RegularIOSPalette()
   let start: Handler
+  @State private var showError = false
   
   var body: some View {
-    VStack(alignment: .leading) {
-      HStack {
-        HStack(spacing: 10) {
-          Button(action: {}) {
-            Text("Button")
+    ZStack {
+      GeometryReader { geo in
+        ZStack {
+          if $showError.wrappedValue {
+            TextInputErrorView(
+              title: "test@example.com",
+              subtitle: "пользователя с таким email не существует",
+              isPresented: $showError
+            )
+            .frame(width: geo.size.width * 0.9, height: 60, alignment: .center)
+            .background(Color.clear)
+            .transition(AnyTransition.opacity.animation(.linear(duration: 0.5)))
           }
-          Button(action: {}) {
-            Text("WOW")
+          VStack(alignment: .leading) {
+            HStack {
+              HStack(spacing: 10) {
+                Button(action: { showError = true }) {
+                  Text("Button")
+                }
+                Button(action: {}) {
+                  Text("WOW")
+                }
+              }.padding(.leading)
+              
+              Spacer()
+              
+              HStack(spacing: 10) {
+                Button(action: {}) {
+                  Text("Button")
+                }
+                Button(action: {}) {
+                  Text("WOW")
+                }
+              }.padding(.trailing)
+            }
+            .padding(.top, 60)
+            
+            Spacer()
+            
+            HStack {
+              Spacer()
+              VStack(alignment: .center, spacing: 20) {
+                MenuButton(action: start, title: "CONTINUE")
+                MenuButton(action: start, title: "NEW GAME")
+              }
+              .frame(width: 200, height: UIScreen.main.bounds.height * 0.2, alignment: .center)
+              Spacer()
+            }.padding(.bottom, UIScreen.main.bounds.height * 0.1)
           }
-        }.padding(.leading)
-        
-        Spacer()
-        
-        HStack(spacing: 10) {
-          Button(action: {}) {
-            Text("Button")
-          }
-          Button(action: {}) {
-            Text("WOW")
-          }
-        }.padding(.trailing)
-      }
-      .padding(.top, 60)
-      
-      Spacer()
-      
-      HStack {
-        Spacer()
-        VStack(alignment: .center, spacing: 20) {
-          MenuButton(action: start, title: "CONTINUE")
-          MenuButton(action: start, title: "NEW GAME")
         }
-        .frame(width: 200, height: UIScreen.main.bounds.height * 0.2, alignment: .center)
-        Spacer()
-      }.padding(.bottom, UIScreen.main.bounds.height * 0.1)
+      }
     }
   }
 }
