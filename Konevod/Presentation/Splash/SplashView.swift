@@ -6,13 +6,11 @@
 import SwiftUI
 
 struct SplashView<Store>: View where Store: SplashViewOutput {
-  let logoImage: UIImage
   var ringSpinner = RingSpinner()
   
   @ObservedObject var store: Store
   
-  internal init(logoImage: UIImage, store: Store) {
-    self.logoImage = logoImage
+  internal init(store: Store) {
     self.store = store
     store.loadController.itemStateUpdateHandler = ringSpinner.setState(_:)
     ringSpinner.tapAction = store.loadController.activate
@@ -22,7 +20,7 @@ struct SplashView<Store>: View where Store: SplashViewOutput {
     NavigationView {
       VStack {
         VStack {
-          Image(uiImage: logoImage)
+          Image(uiImage: UIImage(named: "logo")!)
             .resizable()
             .frame(width: 200, height: 200, alignment: .center)
           Text("KONEVOD")
@@ -47,13 +45,11 @@ struct SplashView<Store>: View where Store: SplashViewOutput {
     .onAppear(perform: store.viewDidAppear)
   }
 }
-// MARK: - SplashViewInput
-extension SplashView: SplashViewInput {}
 
 struct SplashView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SplashView(logoImage: UIImage(named: "logo")!, store: SplashStore())
+      SplashView(store: SplashStore())
     }
   }
 }

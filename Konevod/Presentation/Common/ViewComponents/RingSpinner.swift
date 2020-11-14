@@ -14,7 +14,7 @@ protocol Runnable {
   var state: RunnableState { get set }
 }
 
-struct RingSpinner: View, Selectable {
+struct RingSpinner: View {
   @ObservedObject var state: RingSpinnerShapeState
   
   var tapAction: Handler?

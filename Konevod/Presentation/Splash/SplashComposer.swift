@@ -9,8 +9,7 @@ final class SplashComposer {
   let view: SplashView<SplashStore>
   
   class func compose() -> SplashComposer {
-    let store = SplashStore()
-    let view = SplashView(logoImage: UIImage(named: "logo") ?? UIImage(), store: store)
+    let view = SplashView(store: SplashStore())
     return SplashComposer(view: view)
   }
   
@@ -18,8 +17,6 @@ final class SplashComposer {
     self.view = view
   }
 }
-
-protocol SplashViewInput {}
 
 protocol SplashViewOutput: ObservableObject {
   var destinationView: AnyView? { get }

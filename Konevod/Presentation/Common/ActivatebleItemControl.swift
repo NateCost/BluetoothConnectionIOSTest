@@ -10,21 +10,10 @@ public enum ActivationState {
   case active
 }
 
-public protocol Selectable {
-  func setState(_ state: ActivationState)
-  var tapAction: Handler? { get set }
-}
-
-public protocol ActivatableItem {
-  func activate()
-  var action: ((_ completion: Handler?) -> Void)? { get set }
-  var state: ActivationState { get }
-}
-
-public class ActivatableItemControl: ActivatableItem {
+public class ActivatableItemControl {
   public var itemStateUpdateHandler: ((_ state: ActivationState) -> Void)?
   public var action: ((_ completion: Handler?) -> Void)?
-  public var state: ActivationState = .inactive {
+  private var state: ActivationState = .inactive {
     didSet { itemStateUpdateHandler?(state) }
   }
   
