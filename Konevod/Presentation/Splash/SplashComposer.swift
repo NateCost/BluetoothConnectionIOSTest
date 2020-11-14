@@ -3,28 +3,27 @@
 //  Copyright © 2020 Nirma Studio. All rights reserved.
 //
 
-import Foundation
-import UIKit
+import SwiftUI
 
 final class SplashComposer {
-  let view: SplashView
+  let view: SplashView<SplashStore>
   
   class func compose() -> SplashComposer {
-    var controller = SplashView(logoImage: UIImage(named: "logo") ?? UIImage())
-    let presenter = SplashPresenter(view: controller)
-    controller.output = presenter
+    let store = SplashStore()
+    let controller = SplashView<SplashStore>(logoImage: UIImage(named: "logo") ?? UIImage(), store: store)
     return SplashComposer(view: controller)
   }
   
-  private init(view: SplashView) {
+  private init(view: SplashView<SplashStore>) {
     self.view = view
   }
 }
 
-protocol SplashViewInput {
-  var loadController: ActivatableItem? { get set }
-}
+protocol SplashViewInput {}
 
-protocol SplashViewOutput: class {
+protocol SplashViewOutput: ObservableObject {
+  var destinationView: AnyView? { get }
+  var activateNavigationLink: Bool { get set }
   func viewDidLoad()
+  func bindLoadController(_ loadController: ActivatableItemControl)
 }

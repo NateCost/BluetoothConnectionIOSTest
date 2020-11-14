@@ -5,26 +5,21 @@
 
 import SwiftUI
 
-struct SplashView: View {
-  var loadController: ActivatableItem?
-  var output: SplashViewOutput?
+struct SplashView<Store>: View where Store: SplashViewOutput {
   let logoImage: UIImage
-  var ringSpinner: RingSpinner
+  var ringSpinner: RingSpinner = RingSpinner()
   
-  init(logoImage: UIImage) {
+  @ObservedObject var store: Store
+  
+  init(logoImage: UIImage, store: Store) {
     self.logoImage = logoImage
-    ringSpinner = RingSpinner()
-    loadController = ActivatableItemControl(itemStateUpdateHandler: ringSpinner.setState(_:))
-    ringSpinner.tapAction = loadController?.activate
+    self.store = store
+    let loadControl = ActivatableItemControl(itemStateUpdateHandler: ringSpinner.setState(_:))
+    ringSpinner.tapAction = loadControl.activate
+    self.store.bindLoadController(loadControl)
   }
   
   var body: some View {
-    NavigationLink(
-      destination: Text("Destination"),
-      isActive: .constant(true),
-      label: {
-        Text("Navigate")
-      })
     VStack {
       VStack {
         Image(uiImage: logoImage)
@@ -40,7 +35,14 @@ struct SplashView: View {
       ringSpinner
         .frame(width: 40, height: 40)
         .padding(.bottom, 100)
-    }.onAppear { output?.viewDidLoad() }
+    }
+    .onAppear { store.viewDidLoad() }
+    .background(
+      NavigationLink(
+        destination: store.destinationView,
+        isActive: $store.activateNavigationLink
+      ) { EmptyView() }
+    )
   }
 }
 // MARK: - SplashViewInput
@@ -49,7 +51,7 @@ extension SplashView: SplashViewInput {}
 struct SplashView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SplashView(logoImage: UIImage(named: "logo")!)
+      SplashView(logoImage: UIImage(named: "logo")!, store: SplashStore())
     }
   }
 }

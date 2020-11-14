@@ -12,7 +12,6 @@
 		F46E7F48255F17C300B3FED4 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46E7F47255F17C300B3FED4 /* Routing.swift */; };
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
-		F484D0512539F7F8007B048D /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484D0502539F7F8007B048D /* SplashVC.swift */; };
 		F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490CBA2255345A7002821EB /* RingSpinner.swift */; };
 		F490CBA72553D51D002821EB /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490CBA62553D51D002821EB /* MenuButton.swift */; };
 		F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CCC2551AC34003F27BE /* SelectableButton.swift */; };
@@ -20,7 +19,7 @@
 		F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEA2552BCCF003F27BE /* SplashView.swift */; };
 		F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */; };
 		F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94891254CAC830084E557 /* SplashComposer.swift */; };
-		F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashPresenter.swift */; };
+		F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashStore.swift */; };
 		F4B948A4254DDE580084E557 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948A3254DDE580084E557 /* MainMenuVC.swift */; };
 		F4B948AA254DDE6C0084E557 /* MainMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948A9254DDE6C0084E557 /* MainMenuPresenter.swift */; };
 		F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948AD254DDE780084E557 /* MainMenuComposer.swift */; };
@@ -52,7 +51,6 @@
 		F46E7F47255F17C300B3FED4 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
-		F484D0502539F7F8007B048D /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F490CBA2255345A7002821EB /* RingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSpinner.swift; sourceTree = "<group>"; };
 		F490CBA62553D51D002821EB /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		F4A65CCC2551AC34003F27BE /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
@@ -60,7 +58,7 @@
 		F4A65CEA2552BCCF003F27BE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		F4B94891254CAC830084E557 /* SplashComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashComposer.swift; sourceTree = "<group>"; };
-		F4B94895254CAFE20084E557 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		F4B94895254CAFE20084E557 /* SplashStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashStore.swift; sourceTree = "<group>"; };
 		F4B948A3254DDE580084E557 /* MainMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		F4B948A9254DDE6C0084E557 /* MainMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenter.swift; sourceTree = "<group>"; };
 		F4B948AD254DDE780084E557 /* MainMenuComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuComposer.swift; sourceTree = "<group>"; };
@@ -140,10 +138,9 @@
 		F484D04F2539F66C007B048D /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				F484D0502539F7F8007B048D /* SplashVC.swift */,
-				F4B94895254CAFE20084E557 /* SplashPresenter.swift */,
-				F4B94891254CAC830084E557 /* SplashComposer.swift */,
 				F4A65CEA2552BCCF003F27BE /* SplashView.swift */,
+				F4B94895254CAFE20084E557 /* SplashStore.swift */,
+				F4B94891254CAC830084E557 /* SplashComposer.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -192,8 +189,8 @@
 		F4CEEEEA253829B900A37ECB = {
 			isa = PBXGroup;
 			children = (
-				F4CE6E532557EA53001E8917 /* KonevodTests */,
 				F4CEEEF5253829B900A37ECB /* Konevod */,
+				F4CE6E532557EA53001E8917 /* KonevodTests */,
 				F4CEEEF4253829B900A37ECB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -361,7 +358,7 @@
 			files = (
 				F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */,
 				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
-				F4B94896254CAFE20084E557 /* SplashPresenter.swift in Sources */,
+				F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
 				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
 				F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */,
@@ -374,7 +371,6 @@
 				F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */,
 				F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */,
 				F46E7F48255F17C300B3FED4 /* Routing.swift in Sources */,
-				F484D0512539F7F8007B048D /* SplashVC.swift in Sources */,
 				F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */,
 				F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */,
 			);
