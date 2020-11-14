@@ -21,8 +21,7 @@ extension SplashStore {
   func loadRequiredData(completion: Handler?) {
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
       completion?()
-      self?.destinationView = AnyView(MainMenuView(start: {}))
-      self?.activateNavigationLink = true
+      self?.transiteToMainMenu()
     }
   }
   
@@ -33,8 +32,8 @@ extension SplashStore {
 }
 
 class SplashStore: ObservableObject {
-  var destinationView: AnyView?
-  var activateNavigationLink: Bool = false
+  @Published var destinationView: AnyView?
+  @Published var activateNavigationLink: Bool = false
   
   var loadController: ActivatableItemControl = ActivatableItemControl()
 }

@@ -15,6 +15,7 @@ protocol Runnable {
 }
 
 struct RingSpinner: View, Selectable {
+  #warning("this is so bad. change to @StateObject in ios 14")
   @ObservedObject var state = RingSpinnerShapeState()
   
   var tapAction: Handler?
