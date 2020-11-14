@@ -14,7 +14,6 @@
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
 		F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490CBA2255345A7002821EB /* RingSpinner.swift */; };
 		F490CBA72553D51D002821EB /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F490CBA62553D51D002821EB /* MenuButton.swift */; };
-		F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CCC2551AC34003F27BE /* SelectableButton.swift */; };
 		F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CE62552BC17003F27BE /* SceneDelegate.swift */; };
 		F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEA2552BCCF003F27BE /* SplashView.swift */; };
 		F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */; };
@@ -31,7 +30,6 @@
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
 		F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA4BC3254E958C00C3F78F /* ColorPalette.swift */; };
 		F4DC105D2538400D0074B211 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC105C2538400D0074B211 /* SwiftFormat */; };
-		F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F73A65253C384E00CB618A /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +50,6 @@
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F490CBA2255345A7002821EB /* RingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSpinner.swift; sourceTree = "<group>"; };
 		F490CBA62553D51D002821EB /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
-		F4A65CCC2551AC34003F27BE /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		F4A65CE62552BC17003F27BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F4A65CEA2552BCCF003F27BE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F4A65CEE2552FBE1003F27BE /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		F4CEEF04253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4CEEF09253829BB00A37ECB /* KonevodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonevodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DA4BC3254E958C00C3F78F /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
-		F4F73A65253C384E00CB618A /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +142,6 @@
 		F4A65CD02551AC54003F27BE /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				F4F73A65253C384E00CB618A /* SpinnerView.swift */,
-				F4A65CCC2551AC34003F27BE /* SelectableButton.swift */,
 				F490CBA2255345A7002821EB /* RingSpinner.swift */,
 				F490CBA62553D51D002821EB /* MenuButton.swift */,
 			);
@@ -358,14 +352,12 @@
 				F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
 				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
-				F4F73A66253C384E00CB618A /* SpinnerView.swift in Sources */,
 				F4B948AA254DDE6C0084E557 /* MainMenuStore.swift in Sources */,
 				F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */,
 				F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */,
 				F490CBA72553D51D002821EB /* MenuButton.swift in Sources */,
 				F4A65CE72552BC17003F27BE /* SceneDelegate.swift in Sources */,
 				F490CBA3255345A7002821EB /* RingSpinner.swift in Sources */,
-				F4A65CCD2551AC34003F27BE /* SelectableButton.swift in Sources */,
 				F46E7F48255F17C300B3FED4 /* Routing.swift in Sources */,
 				F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */,
 				F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */,

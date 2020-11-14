@@ -3,7 +3,7 @@
 //  Copyright © 2020 Nirma Studio. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public enum ActivationState {
   case inactive

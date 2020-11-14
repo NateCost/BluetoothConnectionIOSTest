@@ -11,6 +11,10 @@ extension SplashStore: SplashViewOutput {
     loadController.activate()
   }
 }
+// MARK: - FailureHandable
+extension SplashStore: FailureHandable {
+  func handle(_ error: Error) {}
+}
 // MARK: - SplashStore
 extension SplashStore {
   func loadRequiredData(completion: Handler?) {

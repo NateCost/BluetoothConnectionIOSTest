@@ -27,3 +27,7 @@ protocol SplashViewOutput: ObservableObject {
   var loadController: ActivatableItemControl { get }
   func viewDidAppear()
 }
+
+protocol FailureHandable: class {
+  func handle(_ error: Error)
+}
