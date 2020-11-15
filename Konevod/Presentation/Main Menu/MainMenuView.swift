@@ -15,7 +15,7 @@ struct MainMenuView: View {
       GeometryReader { geo in
         ZStack {
           if $showError.wrappedValue {
-            TextInputView(placeholder: "Please enter email")
+            TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
             .frame(width: geo.size.width * 0.9, height: 60, alignment: .center)
             .background(Color.clear)
             .transition(AnyTransition.opacity.animation(.linear(duration: 0.5)))

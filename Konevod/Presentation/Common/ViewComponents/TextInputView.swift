@@ -10,22 +10,31 @@ enum TextInputViewState {
   case error
 }
 
+final class TextInputViewStore: ObservableObject {
+  @Published var state: TextInputViewState
+  @Published var errorText: String
+  
+  init(state: TextInputViewState = .input, errorText: String = "") {
+    self.state = state
+    self.errorText = errorText
+  }
+}
+
 struct TextInputView: View {
   var placeholder: String
   @State var enteredText: String = ""
-  @State var errorText: String = ""
-  @State var state: TextInputViewState = .input
+  @ObservedObject var store: TextInputViewStore
   
   var body: some View {
     ZStack {
       GeometryReader { geometry in
-        if $state.wrappedValue == .error {
+        if $store.state.wrappedValue == .error {
           HStack {
             HStack {
               VStack(alignment: .leading) {
                 Text(enteredText)
                   .fixedSize(horizontal: false, vertical: true)
-                Text(errorText)
+                Text(store.errorText)
                   .fixedSize(horizontal: false, vertical: true)
                   .font(.system(size: 11))
                   .foregroundColor(Color.red)
@@ -52,7 +61,7 @@ struct TextInputView: View {
           )
           .background(RoundedRectangle(cornerRadius: 16).fill(Color.white))
         }
-        if $state.wrappedValue == .input {
+        if $store.state.wrappedValue == .input {
           HStack {
             TextField(placeholder, text: $enteredText)
               .padding()
@@ -71,17 +80,17 @@ struct TextInputView: View {
 
 struct TextInputErrorView_Previews: PreviewProvider {
   static var previews: some View {
-    TextInputView(placeholder: "Please enter email")
+    TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
       .frame(width: 340, height: 60, alignment: .center)
       .background(Color.clear)
       .previewLayout(.sizeThatFits)
     
-    TextInputView(placeholder: "Please enter email")
+    TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
       .frame(width: 200, height: 100, alignment: .center)
       .background(Color.gray)
       .previewLayout(.sizeThatFits)
     
-    TextInputView(placeholder: "Please enter email")
+    TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
       .frame(width: 340, height: 60, alignment: .center)
       .background(Color.black)
       .previewLayout(.sizeThatFits)
@@ -90,8 +99,10 @@ struct TextInputErrorView_Previews: PreviewProvider {
     TextInputView(
       placeholder: "Please enter email",
       enteredText: "test@example.com",
-      errorText: "Пользователя с таким email не существует",
-      state: .error
+      store: TextInputViewStore(
+        state: .error,
+        errorText: "Пользователя с таким email не существует"
+      )
     )
     .frame(width: 340, height: 60, alignment: .center)
     .background(Color.gray)
@@ -100,8 +111,10 @@ struct TextInputErrorView_Previews: PreviewProvider {
     TextInputView(
       placeholder: "Please enter email",
       enteredText: "test@example.com",
-      errorText: "Пользователя с таким email не существует",
-      state: .error
+      store: TextInputViewStore(
+        state: .error,
+        errorText: "Пользователя с таким email не существует"
+      )
     )
     .frame(width: 340, height: 60, alignment: .center)
     .background(Color.gray)
