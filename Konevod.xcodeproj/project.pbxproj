@@ -21,7 +21,7 @@
 		F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B94895254CAFE20084E557 /* SplashStore.swift */; };
 		F4B948AA254DDE6C0084E557 /* MainMenuStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948A9254DDE6C0084E557 /* MainMenuStore.swift */; };
 		F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B948AD254DDE780084E557 /* MainMenuComposer.swift */; };
-		F4CE400925601FDD009B9611 /* TextInputErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE400825601FDD009B9611 /* TextInputErrorView.swift */; };
+		F4CE400925601FDD009B9611 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE400825601FDD009B9611 /* TextInputView.swift */; };
 		F4CE6E592557EA53001E8917 /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E552557EA53001E8917 /* SplashPresenterTests.swift */; };
 		F4CE6E5A2557EA53001E8917 /* ActivatableItemControlTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E562557EA53001E8917 /* ActivatableItemControlTest.swift */; };
 		F4CE6E5B2557EA53001E8917 /* CommonUIComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE6E572557EA53001E8917 /* CommonUIComponentsTest.swift */; };
@@ -58,7 +58,7 @@
 		F4B94895254CAFE20084E557 /* SplashStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashStore.swift; sourceTree = "<group>"; };
 		F4B948A9254DDE6C0084E557 /* MainMenuStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuStore.swift; sourceTree = "<group>"; };
 		F4B948AD254DDE780084E557 /* MainMenuComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuComposer.swift; sourceTree = "<group>"; };
-		F4CE400825601FDD009B9611 /* TextInputErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputErrorView.swift; sourceTree = "<group>"; };
+		F4CE400825601FDD009B9611 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		F4CE6E552557EA53001E8917 /* SplashPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
 		F4CE6E562557EA53001E8917 /* ActivatableItemControlTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivatableItemControlTest.swift; sourceTree = "<group>"; };
 		F4CE6E572557EA53001E8917 /* CommonUIComponentsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUIComponentsTest.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			children = (
 				F490CBA2255345A7002821EB /* RingSpinner.swift */,
 				F490CBA62553D51D002821EB /* MenuButton.swift */,
-				F4CE400825601FDD009B9611 /* TextInputErrorView.swift */,
+				F4CE400825601FDD009B9611 /* TextInputView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
 				F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
-				F4CE400925601FDD009B9611 /* TextInputErrorView.swift in Sources */,
+				F4CE400925601FDD009B9611 /* TextInputView.swift in Sources */,
 				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
 				F4B948AA254DDE6C0084E557 /* MainMenuStore.swift in Sources */,
 				F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */,

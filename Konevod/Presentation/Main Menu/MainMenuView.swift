@@ -8,18 +8,14 @@ import SwiftUI
 struct MainMenuView: View {
   var colorPalette = RegularIOSPalette()
   let start: Handler
-  @State private var showError = false
+  @State private var showError = true
   
   var body: some View {
     ZStack {
       GeometryReader { geo in
         ZStack {
           if $showError.wrappedValue {
-            TextInputErrorView(
-              title: "test@example.com",
-              subtitle: "пользователя с таким email не существует",
-              isPresented: $showError
-            )
+            TextInputView(placeholder: "Please enter email")
             .frame(width: geo.size.width * 0.9, height: 60, alignment: .center)
             .background(Color.clear)
             .transition(AnyTransition.opacity.animation(.linear(duration: 0.5)))
