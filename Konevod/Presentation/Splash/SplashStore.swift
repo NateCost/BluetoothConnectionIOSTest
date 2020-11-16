@@ -25,7 +25,7 @@ extension SplashStore {
   }
   
   func transiteToMainMenu() {
-    destinationView = AnyView(MainMenuView(start: {}))
+    destinationView = AnyView(MainMenuComposer.compose().view)
   }
 }
 

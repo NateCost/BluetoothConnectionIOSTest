@@ -10,19 +10,28 @@ enum TextInputViewState {
   case error
 }
 
+final class AuthorizationUseCase {
+  
+}
+
 final class TextInputViewStore: ObservableObject {
   @Published var state: TextInputViewState
   @Published var errorText: String
+  @Published var enteredText: String
   
-  init(state: TextInputViewState = .input, errorText: String = "") {
+  init(
+    state: TextInputViewState = .input,
+    errorText: String = "",
+    enteredText: String = ""
+  ) {
     self.state = state
     self.errorText = errorText
+    self.enteredText = enteredText
   }
 }
 
 struct TextInputView: View {
   var placeholder: String
-  @State var enteredText: String = ""
   @ObservedObject var store: TextInputViewStore
   
   var body: some View {
@@ -32,7 +41,7 @@ struct TextInputView: View {
           HStack {
             HStack {
               VStack(alignment: .leading) {
-                Text(enteredText)
+                Text(store.enteredText)
                   .fixedSize(horizontal: false, vertical: true)
                 Text(store.errorText)
                   .fixedSize(horizontal: false, vertical: true)
@@ -63,7 +72,7 @@ struct TextInputView: View {
         }
         if $store.state.wrappedValue == .input {
           HStack {
-            TextField(placeholder, text: $enteredText)
+            TextField(placeholder, text: $store.enteredText)
               .padding()
           }
           .frame(
@@ -98,10 +107,10 @@ struct TextInputErrorView_Previews: PreviewProvider {
     
     TextInputView(
       placeholder: "Please enter email",
-      enteredText: "test@example.com",
       store: TextInputViewStore(
         state: .error,
-        errorText: "Пользователя с таким email не существует"
+        errorText: "Пользователя с таким email не существует",
+        enteredText: "test@example.com"
       )
     )
     .frame(width: 340, height: 60, alignment: .center)
@@ -110,10 +119,10 @@ struct TextInputErrorView_Previews: PreviewProvider {
     
     TextInputView(
       placeholder: "Please enter email",
-      enteredText: "test@example.com",
       store: TextInputViewStore(
         state: .error,
-        errorText: "Пользователя с таким email не существует"
+        errorText: "Пользователя с таким email не существует",
+        enteredText: "test@example.com"
       )
     )
     .frame(width: 340, height: 60, alignment: .center)

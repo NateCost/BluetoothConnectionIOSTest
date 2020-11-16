@@ -6,21 +6,23 @@
 import Foundation
 
 final class MainMenuComposer {
-  let view: MainMenuView
+  let view: MainMenuView<MainMenuStore>
   
   class func compose() -> MainMenuComposer {
-    let view = MainMenuView(colorPalette: RegularIOSPalette(), start: {})
     let store = MainMenuStore()
+    let view = MainMenuView(colorPalette: RegularIOSPalette(), store: store)
     return MainMenuComposer(view: view)
   }
   
-  private init(view: MainMenuView) {
+  private init(view: MainMenuView<MainMenuStore>) {
     self.view = view
   }
 }
 
 protocol MainMenuViewInput: class {}
 
-protocol MainMenuViewOutput: class {
+protocol MainMenuViewOutput: ObservableObject {
   func viewDidAppear()
+  func continueGame()
+  func newGame()
 }

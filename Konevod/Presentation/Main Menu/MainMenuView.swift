@@ -5,25 +5,24 @@
 
 import SwiftUI
 
-struct MainMenuView: View {
+struct MainMenuView<Store>: View where Store: MainMenuViewOutput {
   var colorPalette = RegularIOSPalette()
-  let start: Handler
-  @State private var showError = true
+  @ObservedObject var store: Store
   
   var body: some View {
     ZStack {
       GeometryReader { geo in
         ZStack {
-          if $showError.wrappedValue {
-            TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
-            .frame(width: geo.size.width * 0.9, height: 60, alignment: .center)
-            .background(Color.clear)
-            .transition(AnyTransition.opacity.animation(.linear(duration: 0.5)))
-          }
+//          if $showError.wrappedValue {
+//            TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
+//            .frame(width: geo.size.width * 0.9, height: 60, alignment: .center)
+//            .background(Color.clear)
+//            .transition(AnyTransition.opacity.animation(.linear(duration: 0.5)))
+//          }
           VStack(alignment: .leading) {
             HStack {
               HStack(spacing: 10) {
-                Button(action: { showError = true }) {
+                Button(action: store.continueGame) {
                   Text("Button")
                 }
                 Button(action: {}) {
@@ -49,8 +48,8 @@ struct MainMenuView: View {
             HStack {
               Spacer()
               VStack(alignment: .center, spacing: 20) {
-                MenuButton(action: start, title: "CONTINUE")
-                MenuButton(action: start, title: "NEW GAME")
+                MenuButton(action: store.continueGame, title: "CONTINUE")
+                MenuButton(action: store.newGame, title: "NEW GAME")
               }
               .frame(width: 200, height: UIScreen.main.bounds.height * 0.2, alignment: .center)
               Spacer()
@@ -64,6 +63,6 @@ struct MainMenuView: View {
 
 struct MainMenuView_Previews: PreviewProvider {
   static var previews: some View {
-    MainMenuView(colorPalette: RegularIOSPalette(), start: {})
+    MainMenuComposer.compose().view
   }
 }

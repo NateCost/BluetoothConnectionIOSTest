@@ -16,7 +16,7 @@ public enum PresentationView {
   
   func view() -> some View {
     switch self {
-      case .mainMenu: return AnyView(MainMenuView(start: {}))
+      case .mainMenu: return AnyView(MainMenuView(store: MainMenuStore()))
 //      case .noInternetConnection: return AnyView(ModalView(style: .noInternetConnection))
 //      case .incorrectLogin: return AnyView(ModalView(style: .incorrectLogin))
 //      case .invalidAge: return AnyView(ModalView(style: .invalidAge))
