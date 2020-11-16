@@ -13,6 +13,9 @@ enum TextInputViewState {
 final class AuthorizationUseCase {
   
 }
+extension TextInputStore {
+  func giveText() -> String { enteredText }
+}
 
 final class TextInputStore: TextInputViewOutput {
   @Published var state: TextInputViewState

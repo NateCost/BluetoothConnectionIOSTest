@@ -7,15 +7,17 @@ import Foundation
 
 final class TextInputComposer {
   let view: TextInputView<TextInputStore>
+  let store: TextInputStore
   
   class func compose() -> TextInputComposer {
     let store = TextInputStore()
     let view = TextInputView(placeholder: "Please enter text", store: store)
-    return TextInputComposer(view: view)
+    return TextInputComposer(view: view, store: store)
   }
   
-  private init(view: TextInputView<TextInputStore>) {
+  private init(view: TextInputView<TextInputStore>, store: TextInputStore) {
     self.view = view
+    self.store = store
   }
 }
 

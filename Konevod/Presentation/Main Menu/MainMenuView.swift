@@ -17,16 +17,14 @@ struct MainMenuView<
     ZStack {
       GeometryReader { geo in
         ZStack {
-//          if $showError.wrappedValue {
           textInputView
             .frame(width: geo.size.width * 0.9, height: 60, alignment: .center)
             .background(Color.clear)
             .transition(AnyTransition.opacity.animation(.linear(duration: 0.5)))
-//          }
           VStack(alignment: .leading) {
             HStack {
               HStack(spacing: 10) {
-                Button(action: store.continueGame) {
+                Button(action: store.getText) {
                   Text("Button")
                 }
                 Button(action: {}) {
@@ -52,7 +50,7 @@ struct MainMenuView<
             HStack {
               Spacer()
               VStack(alignment: .center, spacing: 20) {
-                MenuButton(action: store.continueGame, title: "CONTINUE")
+                MenuButton(action: store.getText, title: "CONTINUE")
                 MenuButton(action: store.newGame, title: "NEW GAME")
               }
               .frame(width: 200, height: UIScreen.main.bounds.height * 0.2, alignment: .center)

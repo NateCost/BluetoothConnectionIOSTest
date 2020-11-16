@@ -9,8 +9,8 @@ final class MainMenuComposer {
   let view: MainMenuView<MainMenuStore, TextInputStore>
   
   class func compose() -> MainMenuComposer {
-    let store = MainMenuStore()
     let textInputComposer = TextInputComposer.compose()
+    let store = MainMenuStore(getTextHandler: textInputComposer.store.giveText)
     
     let view = MainMenuView<MainMenuStore, TextInputStore>(
       colorPalette: RegularIOSPalette(),
@@ -29,6 +29,6 @@ protocol MainMenuViewInput: class {}
 
 protocol MainMenuViewOutput: ObservableObject {
   func viewDidAppear()
-  func continueGame()
+  func getText()
   func newGame()
 }

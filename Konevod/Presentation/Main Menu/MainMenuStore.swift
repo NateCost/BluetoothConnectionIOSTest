@@ -9,9 +9,11 @@ import SwiftUI
 extension MainMenuStore: MainMenuViewOutput {
   func viewDidAppear() {}
   
-  func continueGame() {
-    print("sfdasda")
+  func getText() {
+    let text = getTextHandler()
+    print(text)
   }
+  
   func newGame() {
     print("sfdasda")
   }
@@ -19,4 +21,10 @@ extension MainMenuStore: MainMenuViewOutput {
 // MARK: - MainMenuStore
 extension MainMenuStore {}
 
-public final class MainMenuStore {}
+public final class MainMenuStore {
+  var getTextHandler: () -> String
+  
+  internal init(getTextHandler: @escaping () -> String) {
+    self.getTextHandler = getTextHandler
+  }
+}
