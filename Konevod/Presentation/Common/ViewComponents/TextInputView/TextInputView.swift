@@ -5,34 +5,9 @@
 
 import SwiftUI
 
-enum TextInputViewState {
-  case input
-  case error
-}
-
-final class AuthorizationUseCase {
-  
-}
-
-final class TextInputViewStore: ObservableObject {
-  @Published var state: TextInputViewState
-  @Published var errorText: String
-  @Published var enteredText: String
-  
-  init(
-    state: TextInputViewState = .input,
-    errorText: String = "",
-    enteredText: String = ""
-  ) {
-    self.state = state
-    self.errorText = errorText
-    self.enteredText = enteredText
-  }
-}
-
-struct TextInputView: View {
+struct TextInputView<Store>: View where Store: TextInputViewOutput {
   var placeholder: String
-  @ObservedObject var store: TextInputViewStore
+  @ObservedObject var store: Store
   
   var body: some View {
     ZStack {
@@ -89,17 +64,17 @@ struct TextInputView: View {
 
 struct TextInputErrorView_Previews: PreviewProvider {
   static var previews: some View {
-    TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
+    TextInputView(placeholder: "Please enter email", store: TextInputStore())
       .frame(width: 340, height: 60, alignment: .center)
       .background(Color.clear)
       .previewLayout(.sizeThatFits)
     
-    TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
+    TextInputView(placeholder: "Please enter email", store: TextInputStore())
       .frame(width: 200, height: 100, alignment: .center)
       .background(Color.gray)
       .previewLayout(.sizeThatFits)
     
-    TextInputView(placeholder: "Please enter email", store: TextInputViewStore())
+    TextInputView(placeholder: "Please enter email", store: TextInputStore())
       .frame(width: 340, height: 60, alignment: .center)
       .background(Color.black)
       .previewLayout(.sizeThatFits)
@@ -107,7 +82,7 @@ struct TextInputErrorView_Previews: PreviewProvider {
     
     TextInputView(
       placeholder: "Please enter email",
-      store: TextInputViewStore(
+      store: TextInputStore(
         state: .error,
         errorText: "Пользователя с таким email не существует",
         enteredText: "test@example.com"
@@ -119,7 +94,7 @@ struct TextInputErrorView_Previews: PreviewProvider {
     
     TextInputView(
       placeholder: "Please enter email",
-      store: TextInputViewStore(
+      store: TextInputStore(
         state: .error,
         errorText: "Пользователя с таким email не существует",
         enteredText: "test@example.com"

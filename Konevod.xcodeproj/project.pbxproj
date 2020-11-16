@@ -31,6 +31,8 @@
 		F4CEEF03253829BB00A37ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CEEF01253829BB00A37ECB /* LaunchScreen.storyboard */; };
 		F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA4BC3254E958C00C3F78F /* ColorPalette.swift */; };
 		F4DC105D2538400D0074B211 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC105C2538400D0074B211 /* SwiftFormat */; };
+		F4EA6950256275F700C51400 /* TextInputViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EA694F256275F700C51400 /* TextInputViewStore.swift */; };
+		F4EA69562562760000C51400 /* TextInputViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EA69552562760000C51400 /* TextInputViewComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F4CEEF04253829BB00A37ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4CEEF09253829BB00A37ECB /* KonevodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonevodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DA4BC3254E958C00C3F78F /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		F4EA694F256275F700C51400 /* TextInputViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewStore.swift; sourceTree = "<group>"; };
+		F4EA69552562760000C51400 /* TextInputViewComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,9 +148,9 @@
 		F4A65CD02551AC54003F27BE /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F4EA694E256275E000C51400 /* TextInputView */,
 				F490CBA2255345A7002821EB /* RingSpinner.swift */,
 				F490CBA62553D51D002821EB /* MenuButton.swift */,
-				F4CE400825601FDD009B9611 /* TextInputView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -207,6 +211,16 @@
 				F484D0342539EDD7007B048D /* Supporting FIles */,
 			);
 			path = Konevod;
+			sourceTree = "<group>";
+		};
+		F4EA694E256275E000C51400 /* TextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE400825601FDD009B9611 /* TextInputView.swift */,
+				F4EA694F256275F700C51400 /* TextInputViewStore.swift */,
+				F4EA69552562760000C51400 /* TextInputViewComposer.swift */,
+			);
+			path = TextInputView;
 			sourceTree = "<group>";
 		};
 		F4F73A64253C383F00CB618A /* Common */ = {
@@ -350,6 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EA69562562760000C51400 /* TextInputViewComposer.swift in Sources */,
+				F4EA6950256275F700C51400 /* TextInputViewStore.swift in Sources */,
 				F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */,
 				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
 				F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */,

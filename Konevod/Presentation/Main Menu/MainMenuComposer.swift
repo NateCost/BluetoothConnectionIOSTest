@@ -6,15 +6,21 @@
 import Foundation
 
 final class MainMenuComposer {
-  let view: MainMenuView<MainMenuStore>
+  let view: MainMenuView<MainMenuStore, TextInputStore>
   
   class func compose() -> MainMenuComposer {
     let store = MainMenuStore()
-    let view = MainMenuView(colorPalette: RegularIOSPalette(), store: store)
+    let textInputComposer = TextInputComposer.compose()
+    
+    let view = MainMenuView<MainMenuStore, TextInputStore>(
+      colorPalette: RegularIOSPalette(),
+      textInputView: textInputComposer.view,
+      store: store
+    )
     return MainMenuComposer(view: view)
   }
   
-  private init(view: MainMenuView<MainMenuStore>) {
+  private init(view: MainMenuView<MainMenuStore, TextInputStore>) {
     self.view = view
   }
 }
