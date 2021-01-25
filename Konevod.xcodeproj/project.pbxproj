@@ -10,6 +10,9 @@
 		F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */; };
 		F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2F1C2544160700D497D5 /* Typealiases.swift */; };
 		F44EB20925BF569E003B57FB /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44EB20825BF569E003B57FB /* GameMode.swift */; };
+		F44EB20D25BF573F003B57FB /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44EB20C25BF573F003B57FB /* Map.swift */; };
+		F44EB21125BF5B5F003B57FB /* MapAffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44EB21025BF5B5F003B57FB /* MapAffix.swift */; };
+		F44EB21525BF60C0003B57FB /* Affix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44EB21425BF60C0003B57FB /* Affix.swift */; };
 		F46E7F48255F17C300B3FED4 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46E7F47255F17C300B3FED4 /* Routing.swift */; };
 		F484D0362539EE09007B048D /* .swiftformat in Resources */ = {isa = PBXBuildFile; fileRef = F484D0352539EE09007B048D /* .swiftformat */; };
 		F484D03B2539EE9F007B048D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F484D03A2539EE9F007B048D /* .gitignore */; };
@@ -50,6 +53,9 @@
 		F41C2F0F25440F6700D497D5 /* ActivatebleItemControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatebleItemControl.swift; sourceTree = "<group>"; };
 		F41C2F1C2544160700D497D5 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		F44EB20825BF569E003B57FB /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		F44EB20C25BF573F003B57FB /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		F44EB21025BF5B5F003B57FB /* MapAffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAffix.swift; sourceTree = "<group>"; };
+		F44EB21425BF60C0003B57FB /* Affix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affix.swift; sourceTree = "<group>"; };
 		F46E7F47255F17C300B3FED4 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		F484D0352539EE09007B048D /* .swiftformat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftformat; sourceTree = SOURCE_ROOT; };
 		F484D03A2539EE9F007B048D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
@@ -134,6 +140,9 @@
 			children = (
 				F41C2F1C2544160700D497D5 /* Typealiases.swift */,
 				F44EB20825BF569E003B57FB /* GameMode.swift */,
+				F44EB20C25BF573F003B57FB /* Map.swift */,
+				F44EB21025BF5B5F003B57FB /* MapAffix.swift */,
+				F44EB21425BF60C0003B57FB /* Affix.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -372,10 +381,12 @@
 				F4A65CEF2552FBE1003F27BE /* MainMenuView.swift in Sources */,
 				F41C2F1025440F6700D497D5 /* ActivatebleItemControl.swift in Sources */,
 				F4B94896254CAFE20084E557 /* SplashStore.swift in Sources */,
+				F44EB21125BF5B5F003B57FB /* MapAffix.swift in Sources */,
 				F4CEEEF7253829B900A37ECB /* AppDelegate.swift in Sources */,
 				F4CE400925601FDD009B9611 /* TextInputView.swift in Sources */,
 				F41C2F1D2544160700D497D5 /* Typealiases.swift in Sources */,
 				F4B948AA254DDE6C0084E557 /* MainMenuStore.swift in Sources */,
+				F44EB20D25BF573F003B57FB /* Map.swift in Sources */,
 				F4B94892254CAC830084E557 /* SplashComposer.swift in Sources */,
 				F4B948AE254DDE780084E557 /* MainMenuComposer.swift in Sources */,
 				F490CBA72553D51D002821EB /* MenuButton.swift in Sources */,
@@ -384,6 +395,7 @@
 				F44EB20925BF569E003B57FB /* GameMode.swift in Sources */,
 				F46E7F48255F17C300B3FED4 /* Routing.swift in Sources */,
 				F4DA4BC4254E958C00C3F78F /* ColorPalette.swift in Sources */,
+				F44EB21525BF60C0003B57FB /* Affix.swift in Sources */,
 				F4A65CEB2552BCCF003F27BE /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
